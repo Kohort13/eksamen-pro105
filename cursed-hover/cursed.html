@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funker dette?</title>
+    <!--OBS OBS! DETTE ER BARE EN TEST-FIL -- SLETT FØR INNLEVERING!-->
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .hover-box {
+        height: 1400px;
+        width: 100%;
+        background-color: #333;
+        border-style: solid;
+        border-width: 3px;
+        border-color: red;
+    }
+    .hover-box:hover{
+        background-color: grey;
+        transition-property: background-color;
+        transition-duration: 1s;
+    }
+    .hover-box a{
+        text-align: center;
+        margin-left: 300px;
+    }
+    .hover-box a:hover{
+        font-size: 20px;
+    }
+    .slide-box{
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        position: fixed;
+        top: 600px;
+        left: -100px;
+        background-color: indigo;
+    }
+    #next:hover .slide-box {
+        left: 140px;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+</style>
+<body>
+    <div class="hover-box" id="prev">
+        <a href="#next">Frem</a>
+    </div>
+    <div class="hover-box" id="next">
+        <a href="#prev">Tilbake</a>
+        <div class="slide-box">
+            <p>Hei!</p>
+        </div>
+    </div>
+    
+</body>
+</html>
