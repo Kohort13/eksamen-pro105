@@ -6,56 +6,149 @@
     <title>Funker dette?</title>
     <!--OBS OBS! DETTE ER BARE EN TEST-FIL -- SLETT FØR INNLEVERING!-->
 </head>
+
+<body>
+    <!--
+    -->
+    <div class="container">
+        <div class="frame" id="fr-1">
+            <div class="nav-buttons">
+                <a class="prev-frame" href="#fr-1"> Frame 1 < </a>
+                <a class="next-frame" href="#fr-2"> > </a>
+            </div>
+        </div>
+        <div class="frame" id="fr-2">
+            <div class="nav-buttons">
+                <a class="prev-frame" href="#fr-1"> Frame 2 < </a>
+                <a class="next-frame" href="#fr-3"> > </a>
+            </div>
+        </div>
+        <div class="frame" id="fr-3">
+            <div class="nav-buttons">
+                <a class="prev-frame" href="#fr-2"> Frame 3 < </a>
+                <a class="next-frame" href="#fr-4"> > </a>
+            </div>
+        </div>
+        <div class="frame" id="fr-4">
+            <div class="nav-buttons">
+                <a class="prev-frame" href="#fr-3"> Frame 4 < </a>
+                <a class="next-frame" href="#fr-4"> > </a>
+            </div>
+        </div>
+        <div id="background"></div>
+        <div id="surface"></div>
+        <div id="fish-box"></div>
+    </div>
+</body>
+</html>
 <style>
     * {
         padding: 0;
         margin: 0;
     }
-    .hover-box {
-        height: 1400px;
+    #background{
+        z-index: -1;
+        /*border: 3px solid red;*/
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        height: 100%;
         width: 100%;
-        background-color: #333;
-        border-style: solid;
-        border-width: 3px;
-        border-color: red;
-    }
-    .hover-box:hover{
-        background-color: grey;
+        background-color: teal;
         transition-property: background-color;
         transition-duration: 1s;
     }
-    .hover-box a{
-        text-align: center;
-        margin-left: 300px;
-    }
-    .hover-box a:hover{
-        font-size: 20px;
-    }
-    .slide-box{
-        width: 100px;
-        height: 100px;
-        border-radius: 5px;
+    #surface{
+        z-index: -1;
         position: fixed;
-        top: 600px;
-        left: -100px;
-        background-color: indigo;
-    }
-    #next:hover .slide-box {
-        left: 140px;
+        top: -620px;
+        left: -10%;
+        height: 300px;
+        width: 120%;
+        background-color: skyblue;
+        border-radius: 90%;
         transition-property: all;
+        transition-duration: 3s;
+        animation-name: surfacebounce;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    #fish-box{
+        z-index: 1;
+        position: fixed;
+        top: 12%;
+        left: 10%;
+        height: 150px;
+        width: 150px;
+        opacity: 0;
+        background-color: orange;
+        border: 3px solid blue;
+        border-radius: 100%;
+        transition-property: all;
+        transition-delay: 40ms;
         transition-duration: 1s;
     }
+    .frame {
+        z-index: 2;
+        margin: auto;
+        height: 1400px;
+        width: 100%;
+        /*border: 3px solid brown;*/
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #fr-1:hover ~ #surface{
+        top: -150px;
+    }
+    #fr-2:hover ~ #background{
+        background-color: rgb(0, 0, 199)        
+    }
+    #fr-3:hover ~ #background{
+        background-color: rgb(0, 0, 129);
+    }
+    #fr-4:hover ~ #background{
+        background-color: black;
+    }
+    #fr-2:hover ~ #fish-box{
+        opacity: 1;
+    }
+    #fr-3:hover ~ #fish-box{
+        opacity: 1;
+        left: 50%;
+        top: 50%;
+    }
+    .nav-buttons{
+        position: relative;
+        margin: auto;
+        opacity: 100%;
+        background-color: chocolate;
+        text-align: center;
+        width: 20%;
+        border-radius: 15px;
+    }
+    .nav-buttons:hover{
+        opacity: 100%;
+    }
+    a{
+        color: indigo;
+        position: relative;
+        font-size: 25px;
+        text-decoration: none;
+        
+    }
+    a:visited{
+        color: indigo;
+    }
+    @keyframes surfacebounce{
+        0% {
+            transform: scale(1,1) translateX(-100px);
+        }
+        50% {
+            transform: scale(1.2,1.5) translateX(150px);
+        }
+        100% {
+            transform: scale(1,1) translateX(-100px);
+        }
+    }
 </style>
-<body>
-    <div class="hover-box" id="prev">
-        <a href="#next">Frem</a>
-    </div>
-    <div class="hover-box" id="next">
-        <a href="#prev">Tilbake</a>
-        <div class="slide-box">
-            <p>Hei!</p>
-        </div>
-    </div>
-    
-</body>
-</html>
