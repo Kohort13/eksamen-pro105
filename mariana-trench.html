@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mariana-trench.css">
+    <title>Mariana Trench</title>
+</head>
+<body>
+    <div id="root">
+        <!--
+            Frame er en boks som dekker hele skjermen, men de har ikke 100% høyde - altså kan man "scrolle" gjennom de. De er ikke synlige, 
+            men brukes til å trigge frame-n:hover. Hver frame har sin egen nav-buttons div. Disse har ikke fixed position, men er alltid på toppen av skjermen.
+            Når man hopper til neste page vil man effektivt scrolle ned til neste frame-id, og da vil de neste knappene vises.
+        -->
+        <div class="frame" id="frame-1">
+            <div class="nav-buttons">
+                <a href="#frame-1"></a>
+                <a href="#frame-2"></a>
+            </div>
+        </div>
+        <div class="frame" id="frame-2">
+            <div class="nav-buttons">
+                <a href="#frame-1"></a>
+                <a href="#frame-3"></a>
+            </div>
+        </div>
+        <div class="frame" id="frame-3">
+            <div class="nav-buttons">
+                <a href="#frame-2"></a>
+                <a href="#frame-4"></a>
+            </div>
+        </div>
+        <div class="frame" id="frame-4">
+            <div class="nav-buttons">
+                <a href="#frame-3"></a>
+                <a href="#frame-4"></a>
+            </div>
+        </div>
+        
+        <!--
+            Elementet under har fixed position og er satt til å være 100% height og width. Alt grafisk innhold man
+            vil vise MÅ ligge inni denne. Den passer på at du har kontroll over hvor ting er på skjermen.
+            Alle div'er som ligger inni vil arve posisjon. M.a.o vil de forbli på samme sted 
+            på skjermen når man scroller. For å bytte hvilken "page" man ser kan man sette opacity på individuelle page-n.    
+        -->
+        <div class="page" id="title-card">
+            <h1>Velkommen til Mariana Trench</h1>
+        </div>
+        <div class="page" id="background">
+        </div>
+        <div id="gull-ivar"></div>
+        
+        <div class="page" id="page-1">
+            <div class="speech-bubble" id="bbl-01">
+                <div class="bubble">
+                    Oi! Her var det dypt... 
+                </div>
+                <div class="arrow"></div>
+            </div>            
+        </div>
+        <div class="page" id="page-2">            
+        </div>
+        <div class="page" id="page-3"></div>
+        <div class="page" id="page-4"></div>
+        <div class="page" id="page-5"></div>
+        <div class="page" id="page-6"></div>
+    </div>    
+</body>
+</html>

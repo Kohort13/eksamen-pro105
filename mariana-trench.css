@@ -1,0 +1,112 @@
+/*******************
+Slides
+*******************/
+.page{
+    transition-property: all;
+    transition-duration: 1s;
+}
+#background{
+    opacity: 100%;
+    background-color: #4eadaf;
+}
+#gull-ivar{
+    position: fixed;
+    opacity: 100%;
+    top: 10%;
+    height: 100px;
+    width: 100px;
+}
+.box{
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+}
+/*******************
+Speech bubbles
+*******************/
+#bbl-01{
+    top:20%;
+    left: 33%;
+}
+
+/*******************
+Slides
+*******************/
+
+
+#frame-1:hover ~ #page-1{
+    opacity: 100%;
+}
+#frame-1:hover ~ #gull-ivar{
+    opacity: 100%;
+}
+
+#frame-2:hover ~ #page-2{
+    opacity: 100%;
+}
+#frame-2:hover ~ #background{
+    background-color: #4eadaf;
+}
+
+#frame-3:hover ~ #page-3{
+    opacity: 100%;
+}
+#frame-3:hover ~ #background{
+    background-color: #4eadaf;
+}
+
+#frame-4:hover ~ #page-4{
+    opacity: 100%;
+}
+#frame-4:hover ~ #background{
+    background-color: #4eadaf;
+}
+
+#frame-5:hover ~ #page-5{
+    opacity: 100%;
+}
+#frame-5:hover ~ #background{
+    background-color: #4eadaf;
+}
+
+#frame-6:hover ~ #page-6{
+    opacity: 100%;
+}
+#frame-6:hover ~ #background{
+    background-color: #4eadaf;
+}
+
+@keyframes slideFromBottom{
+    0%{
+        transform: translate(0px, 1500px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes slideFromTop{
+    0%{
+        transform: translate(0px, -1500px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes slideFromLeft{
+    0%{
+        transform: translate(5000px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes slideFromRight{
+    0%{
+        transform: translate(-5000px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
