@@ -22,11 +22,37 @@
     text-align: center;
     background-color: #0000;
 }
-/*
-***************************
+/****************************
+Speech Bubbles
+****************************/
+.speech-bubble{
+    width: fit-content;
+}
+.bubble{
+    position: relative;
+    width: fit-content;
+    max-width: 250px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    word-wrap: normal;
+}
+.arrow{
+    position: relative;
+    z-index: -1;
+    transform: rotate(45deg);
+    height: 40px;
+    width: 40px;
+    bottom: 35px;
+    left: 10%;
+    background-color: #fff;
+    border-radius: 0 0 4px 0;
+}
+
+/****************************
 Buttons
-***************************
-*/
+****************************/
 .nav-buttons{
     text-align: center;
     height: 30px;
