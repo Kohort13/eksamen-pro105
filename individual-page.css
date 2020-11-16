@@ -1,0 +1,6 @@
+#frame-1:hover ~ #page-1{
+    opacity: 100%;
+}
+#frame-2:hover ~ #page-2{
+    opacity: 100%;
+}
