@@ -28,7 +28,7 @@ Speech Bubbles
 .speech-bubble{
     width: fit-content;
 }
-.bubble{
+.bubble-text{
     position: relative;
     width: fit-content;
     max-width: 250px;
