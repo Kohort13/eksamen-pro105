@@ -9,7 +9,7 @@
     background: url(images/UNDER1920.jpg) no-repeat center fixed;
     background-size: cover;
 }
-#speech-bubble{   
+/* #speech-bubble{   
     z-index: 1;
     top: 70%;
     left: 70%;
@@ -24,24 +24,57 @@
     border-radius: 10%;
     text-align: center;
     padding: 50px 10px 100px 10px;
+} */
+#bbl-01{
+    top: 50%;
+    left: 83%;
+    font-size: 50px;
 }
+#bbl-02{
+    top: 40%;
+    left: 85%;
+    font-size: 18x;
+}
+#bbl-03{
+    top: 55%;
+    left: 85%;
+    font-size: 20px;
+}
+#bbl-03-1{
+    top: 40%;
+    left: 10%;
+    font-size: 15px;
+}
+#bbl-04{
+    top: 50%;
+    left: 85%;
+    font-size: 20px;
+}
+#bbl-04-1{
+    top: 40%;
+    left: 10%;
+    font-size: 15px;
+}
+
+
 /*************************
 Fishes
 **************************/
 #gull-ivar{
+    position: absolute;
     z-index: 1;
-    top: 60%;
+    top: 70%;
     left: 80%;
-    height: 150px;
-    width: 150px;
     opacity: 100%;
     transition-property: all;
     transition-delay: 40ms;
-    transition-duration: 1s;
+    transition-duration: 10s;
 }
+
 #lakselars{
+    position: absolute;
     z-index: 1;
-    top: 60%;
+    top: 70%;
     height: 150px;
     width: 150px;
     opacity: 100%;
@@ -72,7 +105,7 @@ Frames
 
 .page{
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: 2s;
 }
 
 /*************************
@@ -83,7 +116,6 @@ Animations
     animation: shake 1s;
     animation-iteration-count: infinite;
 }
-
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -97,3 +129,44 @@ Animations
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+  @keyframes slideFromBottom{
+    0%{
+        transform: translate(0px, 1500px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes slideFromTop{
+    0%{
+        transform: translate(0px, -1500px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes slideFromLeft{
+    0%{
+        transform: translate(5000px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes slideFromRight{
+    0%{
+        transform: translate(-5000px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes popUp{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
