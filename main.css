@@ -8,32 +8,11 @@
     left: 0;
     height: 100%;
     width: 100%;
-<<<<<<< HEAD
 }
-.nav-buttons{
+.page *{
     position: relative;
-    margin: auto;
-    padding: 0.5%;
-    opacity: 100%;
-    background-color: #459ca3;
-    text-align: center;
-    width: 15%;
-    border-radius: 15px;
 }
-.nav-buttons:hover{
-    opacity: 100%;
-}
-a{
-    color: white;
-    position: relative;
-    font-size: 19px;
-    text-decoration: none;
 
-=======
-    opacity: 0%;
-    position: fixed;
->>>>>>> bf8142f05f3f651438300793dd8db647d0926918
-}
 .frame{
     z-index: 2;
     width: 100%;
