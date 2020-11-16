@@ -2,13 +2,13 @@
     padding: 0;
     margin: 0;
 }
-#display{
+.page{
     z-index: -1;
-    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+<<<<<<< HEAD
 }
 .nav-buttons{
     position: relative;
@@ -29,6 +29,10 @@ a{
     font-size: 19px;
     text-decoration: none;
 
+=======
+    opacity: 0%;
+    position: fixed;
+>>>>>>> bf8142f05f3f651438300793dd8db647d0926918
 }
 .frame{
     z-index: 2;
@@ -37,12 +41,26 @@ a{
     text-align: center;
     background-color: #0000;
 }
-.page{
-    z-index: -1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0%;
-    position: fixed;
+/*
+***************************
+Buttons
+***************************
+*/
+.nav-buttons{
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    margin: 0 auto;
+    background-color: #777;
+    border-radius: 4px;
 }
+.nav-buttons a{
+    font-size: 20px;
+}
+.nav-buttons a:first-child::before{
+    content: "Tilbake";
+}
+.nav-buttons a:nth-child(2)::before {
+    content: "Frem";
+}
+
