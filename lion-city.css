@@ -1,10 +1,89 @@
+
+
+#frame-1:hover~#page-1 {
+    opacity: 100%;
+}
+
+#frame-2:hover~#page-2 {
+    opacity: 100%;
+}
+
+.page {
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.image-container:hover+ .hide{
+    position: relative;
+    width: fit-content;
+    max-width: 250px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    word-wrap: normal;
+}
+
+.image-container img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.image-container figcaption {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+}
+/* .figcaption-1{
+    transform: translate(0)
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+} */
+.lion {
+    position: relative;
+    width: 250%;
+    height: auto;
+    margin-bottom: auto;
+}
+.port{
+    width: 100%;
+    height: auto;
+}
+/* .figcaption-2 {
+    transform: translate(0) text-align: center;
+    font-size: 2em;
+    color: #fff;
+} */
+
+#gullivar-container {
+    position: fixed;
+    width: 25%;
+    height: 25%;
+    top: 50%;
+    left: 65%;
+}
+.hide {
+    display: none;
+}
+#gullivar-container:hover+.hide {
+    display: inline;
+    translate: 3s;
+}
 .fade-in {
     opacity: 1;
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
+
 
 @keyframes fadeInOpacity {
     0% {
@@ -15,4 +94,3 @@
         opacity: 1;
     }
 }
-
