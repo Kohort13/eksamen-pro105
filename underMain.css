@@ -29,7 +29,7 @@ Buttons
     margin: 0 auto;
     background-color:#459ca3;
     border-radius: 4px;
-    padding: 0.5%;
+    /* padding: 0.5%; */
 }
 .nav-buttons :hover{
     color: white;
