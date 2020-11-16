@@ -11,12 +11,12 @@
 }
 #speech-bubble{   
     z-index: 1;
-    top: 80%;
+    top: 70%;
     left: 70%;
     margin-left: -250px;
     margin-top: -100px;
     width: 25%;
-    max-height: 10%;
+    max-height: 15%;
     opacity: 100%;
     background-color: #d3c1a3;
     color:white;
@@ -24,7 +24,6 @@
     border-radius: 10%;
     text-align: center;
     padding: 50px 10px 100px 10px;
-    font-size: 50px;
 }
 /*************************
 Fishes
@@ -48,7 +47,7 @@ Fishes
     opacity: 100%;
     transition-property: all;
     transition-delay: 40ms;
-    transition-duration: 1s;
+    transition-duration: 10s;
 }
 
 
