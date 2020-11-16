@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="great-barrier-reef.css">
+    <title>Great Barrier Reef</title>
+</head>
+<body>
+    <div id="root">
+        <!--
+            Frame er en boks som dekker hele skjermen, men de har ikke 100% høyde - altså kan man "scrolle" gjennom de. De er ikke synlige, 
+            men brukes til å trigge frame-n:hover. Hver frame har sin egen nav-buttons div. Disse har ikke fixed position, men er alltid på toppen av skjermen.
+            Når man hopper til neste page vil man effektivt scrolle ned til neste frame-id, og da vil de neste knappene vises.
+        -->
+
+        <!--Velkommen til Great Barrier Reef-->
+        <div class="frame" id="frame-1">
+            <div class="nav-buttons">
+                <a href="#frame-1"></a>
+                <a href="#frame-2"></a>
+            </div>
+            <br>
+            <h1>Great Barrier Reef</h1>
+            <img id="gull-ivar-flipped" src="images/Gullivar.png">
+            <br>
+            <p>
+                Gull-Ivar var veldig klar på at han ville se Great Barrier Reef da han skulle ut å reise.
+                <br>
+                Han hadde fått med seg at mange av koralene var døende og han ville se korallrevet før det ble borte eller mindre.
+            </p>
+            
+        </div>
+        
+        <!--Fakta med Gull-Ivar-->
+        <div class="frame" id="frame-2">
+            <div class="nav-buttons">
+                <a href="#frame-1"></a>
+                <a href="#frame-3"></a>
+            </div>
+        </div>
+
+        <!--Utforsk med Gull-Ivar-->
+        <div class="frame" id="frame-3">
+            <div class="nav-buttons">
+                <a href="#frame-2"></a>
+                <a href="#frame-4"></a>
+            </div>
+            <br>
+            <h2>Et dypere dykk med Gull-Ivar</h2>
+            <br>
+            <p>Gull-Ivar sier at du kan holde over et eller flere av kortene hvis det er noe annet du vil lese om</p>
+            <img src="images/Guideivar.png">
+            <div class="flip-card-grid">
+                <div class="flip-card" id="tobey-maguire">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <h3>Koraler</h3>                            
+                        </div>
+                        <div class="card-back">
+                            <h4>Koraler</h4>
+                            <p>Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" id="andrew-garfield">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                            <h3>Fremtiden?</h3>
+                        </div>
+                        <div class="card-back">
+                            <h4>Dør revet?</h4>
+                            <p>Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" id="tom-holland">
+                    <div class="flip-card-inner">
+                        <div class="card-front">
+                           <h3>Diverse andre</h3>
+                        </div>
+                        <div class="card-back">
+                            <h4>Diverse</h4>
+                            <p>Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!--
+            Elementet under har fixed position og er satt til å være 100% height og width. Alt grafisk innhold man
+            vil vise MÅ ligge inni denne. Den passer på at du har kontroll over hvor ting er på skjermen.
+            Alle div'er som ligger inni vil arve posisjon. M.a.o vil de forbli på samme sted 
+            på skjermen når man scroller. For å bytte hvilken "page" man ser kan man sette opacity på individuelle page-n.    
+        -->
+        <div class="page" id="page-1">
+            <br>
+            <h2>Great Barrier Reef fakta med Gull-Ivar!</h2>
+            <br>
+            <p>Placeholder</p>
+            <img src="images/Guideivar.png">
+            <p>Placeholder</p>
+            <br>
+            <p>Placeholder - Et eller annet se fra Space</p>
+            <img id="space-ivar" src="images/Gullivar_In_Space.png">
+            <p>Placeholder</p>
+        </div>
+        <div class="page" id="page-2">
+            <p>Dette ser rart ut</p>
+        </div>
+        <div class="page" id="page-3"></div>
+        <div class="page" id="page-4"></div>
+    </div>    
+</body>
+</html>

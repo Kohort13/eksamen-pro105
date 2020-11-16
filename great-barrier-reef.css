@@ -1,0 +1,93 @@
+body {
+    background-image: url("/images/great_barrier_reef.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    color: white;
+}
+
+#gull-ivar-flipped {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#space-ivar {
+    height: 30%;
+}
+#frame-1:hover ~ #page-1{
+    opacity: 100%;
+}
+#frame-2:hover ~ #page-2{
+    opacity: 100%;
+}
+.page{
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.flip-card-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 30px;
+    justify-items: stretch;
+    height: 500px;
+    min-width: 80%;
+    margin: 30px;
+    padding: 30px 0px 30px 0px;
+}
+
+/***************************************
+    FLIP CARDS
+    Based upon https://www.w3schools.com/howto/howto_css_flip_card.asp
+***************************************/
+
+/*Styles the actual cards*/
+.flip-card {
+    background-color: transparent;  
+    width: 90%;
+    height: 100%;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    
+    transition: transform 0.8s; 
+    /*Preserve-3d is required for the back of the card to show, otherwise the front is only mirrored*/
+    transform-style: preserve-3d; 
+  
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+/* Style the front side (fallback if image is missing) */
+.card-front {
+    border-radius: 100px;
+    background-color:#009dc4;
+    color: #FFF;
+    text-align: center;
+}
+
+/* Style the back side */
+.card-back {
+    text-align: center;
+    background-color: #009dc4;
+    color: #FFF;
+    transform: rotateY(180deg);
+    border-radius: 100px;
+}
