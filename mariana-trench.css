@@ -9,26 +9,39 @@ Slides
     opacity: 100%;
     background-color: #4eadaf;
 }
-#gull-ivar{
-    position: fixed;
-    opacity: 100%;
-    top: 10%;
-    height: 100px;
-    width: 100px;
+.gull-ivar{
+    border: 2px solid red;
+    position: absolute;
+    top: unset;
+    left: unset;
+    
+}
+#page-1 .gull-ivar{
+    top: 23%;
+    left: 33%;
+}
+.gull-ivar img{
+    margin-top: 13%;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
 }
 .box{
     top: 50%;
     left: 50%;
     width: 100px;
     height: 100px;
+    border-top-right-radius: 100%;
     background-color: blueviolet;
 }
 /*******************
 Speech bubbles
 *******************/
-#bbl-01{
-    top:20%;
-    left: 33%;
+.speech-bubble{
+    top: 0;
+    left: 0;
 }
 
 /*******************
@@ -37,9 +50,6 @@ Slides
 
 
 #frame-1:hover ~ #page-1{
-    opacity: 100%;
-}
-#frame-1:hover ~ #gull-ivar{
     opacity: 100%;
 }
 
