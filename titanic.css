@@ -11,7 +11,9 @@
     opacity: 100%;
 }
 
-/* setting background image for all frames */
+/* 
+setting background image for all frames 
+*/
   body, html {
     height: 100%;
     margin: 0;
@@ -26,7 +28,9 @@
   }
 
 
-/* first frame/title page */
+/* 
+DESTINATION PAGE
+*/
   #destination{
     font-size: 200px;
     position: relative;
@@ -34,45 +38,85 @@
   }
 
 
-/*Inserting gullivar*/
-  #titanic-gullivar-2{
-    position: relative;
-    width: 30%;
-    left: 70%;
-  }
-  #titanic-gullivar-3{
-    position: relative;
-    width: 30%;
-    left: 60%;
-  }
-  #titanic-gullivar-4{
-    position: relative;
-    width: 30%;
-    left: 60%;
-  }
+/* 
+GULLIVAR
+*/
+  .titanic-gullivar {
+    animation: float 3s linear infinite;
+    position: absolute;
+    width: 15%;
+    left: 80%;
+    top: 40%;
 
-/* Styling text boxes*/
- #p-2{
-     position: relative;
-     font-size: 20px;
-     background-color: white;
-     border: solid 2px black;
-     border-radius: 20px;
-     padding: 10px;
-     width: 300px;
-     left: 70%;
-     top: 5%;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      top: 50%;
+    }
+    50% {
+      top: 53%;
+    }
+  }
+   
+/* 
+TEXT BOX
+*/
+    #bbl-2{
+        font-size: 15px;
+        top: 30px;
+        left: 1000px;
+    }
+    #bbl-3{
+        font-size: 15px;
+        top: 115px;
+        left: 1000px;
+    }
 
- }
-#p-3{
-    position: relative;
-     font-size: 20px;
-     background-color: white;
-     border: solid 2px black;
-     border-radius: 20px;
-     padding: 10px;
-     width: 300px;
-     left: 70%;
-     top: 5%;
-}
+ 
+/* 
+JACK 
+*/
 
+#frame-3:hover ~ #page-3 #jack {
+    width: 20px;
+    left: 200px;
+    top: 100%;
+    animation-name: jack-frozen;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    }
+
+    @keyframes jack-frozen {
+        0%, 100% { 
+          top: 100%; 
+        }
+        50% { 
+          top: 90%; 
+        }
+        
+    }
+
+  /*
+  NECKLACE
+  */
+
+#frame-1:hover ~ #page-1 #necklace{
+      width: 20px;
+      left: 500px;
+      top: -200px;
+      animation-name: necklace-sink;
+      animation-duration: 10s;
+      position: absolute;
+      }
+  
+      @keyframes necklace-sink {
+          0% { 
+            top: -400px; 
+          }
+          80%, 100% { 
+            top: 200px; 
+          }
+      }
+    
