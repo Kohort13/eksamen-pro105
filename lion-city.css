@@ -6,6 +6,9 @@
 #frame-2:hover~#page-2 {
     opacity: 100%;
 } 
+/* #frame-3:hover~#page-3 {
+    opacity: 100%;
+} */
 /*velger bakgrunsfarge for alle sider*/
 .page {
     transition-property: all;
@@ -32,7 +35,7 @@
     width: 1300px;
     bottom: 0px;
 }
-/* bruker flex for å vise tre biilder i page-2 */
+/* used Flex to show to images next to each other. */
 .page-2{
     box-sizing: border-box;
  
@@ -47,37 +50,65 @@
     width: 600px;
 }
 
-/*text på side 2*/
+#bbl-1 {
+    top: 200px;
+    left: 600px;
+  
+}
 
-/* #text-1{
-  color:#D3C1AC ;
-    position: relative;
-    font-weight: normal;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;
-    font: #fff;
-    background-blend-mode: soft-light;
-    width: 250px;
-    padding: 15px;
-    border: 5px solid black;
-    border-radius: 70px;
-    left: 70%;
-    top: 20%;
-}  */
+/* got this code tips from Magnus, line: 60-79 */
+#frame-1:hover ~ #page-1 #bbl-1{
+  animation-name: speechBubble;
+  animation-delay: 5s;
+  animation-duration: 5s;
+}
+@keyframes speechBubble {
+    0%{
+        opacity: 0%;
+        transform: translate(0px, 0px);
+    }
+    20% {
+        opacity: 100%;
+        transform: translate(0px, 0px);
 
-/* skal fikse dette:
- #text-2 {
-    color: #D3C1AC;
-    position: relative;
-    font-weight: normal;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;
-    font: #fff;
-    background-blend-mode: soft-light;
-    width: 250px;
-    padding: 15px;
-    border: 5px solid black;
-    border-radius: 70px;
-    left: 20%
-    top: 20%;
-} */
+    }
+    100%{
+        opacity: 100%;
+        transform: translate(0px, -2000px);
+    }
+}
+#page-2 #bbl-2 {
+    top: 0%;
+    left: 25%;
+}
+
+#frame-2:hover ~ #page-2 #bbl-3 {
+    animation-name: speechBubble;
+    animation-delay: 1s;
+    animation-duration: 5s;
+
+}
+
+
+@keyframes speechBubble {
+    0% {
+        opacity: 0%;
+        transform: translate(0px, 0px);
+    }
+
+    20% {
+        opacity: 100%;
+        transform: translate(0px, 0px);
+
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate(0px, -2000px);
+    }
+}
+
+#bbl-3 {
+    top: 30%;
+    left: 50%;
+}
