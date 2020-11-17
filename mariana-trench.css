@@ -1,96 +1,199 @@
 /*******************
-Slides
+Custom content
 *******************/
+
 .page{
     transition-property: all;
     transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
 #background{
     opacity: 100%;
-    background-color: #4eadaf;
+    background-color: #377a98;
+}
+.surface{
+    width: 120%;
+    height: 20%;
+    top: -10%;
+    left: -10%;
+    background-color: skyblue;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation: wave 5s ease-in-out 0ms infinite;
+    transition: top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .gull-ivar{
-    border: 2px solid red;
-    position: absolute;
-    top: unset;
-    left: unset;
-    
-}
-#page-1 .gull-ivar{
+    position: relative;
+    height: fit-content;
     top: 23%;
     left: 33%;
 }
-.gull-ivar img{
-    margin-top: 13%;
-    position: relative;
-    bottom: 0;
-    right: 0;
-    max-width: 100%;
-    max-height: 100%;
+.img-container{
+    animation: bounce 2s ease-in-out 0s infinite;
 }
-.box{
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    border-top-right-radius: 100%;
-    background-color: blueviolet;
+.gull-ivar div img{
+    transform: scaleX(-1);
+    position: relative;
+    max-width: 70%;
+    max-height: 70%;
+}
+.sign{
+    position: absolute;
+    top: 20%;
+    right: 22%;
+    width: fit-content;
+    padding: 15px 15px;
+    border-radius: 15px;
+    background-color: #d3c1a3;
+    border: 4px solid #684406;
+    transform: rotate(22deg);
 }
 /*******************
 Speech bubbles
 *******************/
 .speech-bubble{
-    top: 0;
-    left: 0;
+    position: relative;
+    animation: bounce 2s ease-in-out 500ms infinite;
 }
 
 /*******************
-Slides
+Setting & positioning frames
 *******************/
 
-
+/*******************
+Frame 1
+*******************/
+#page-1{
+    opacity: 100%;
+}
 #frame-1:hover ~ #page-1{
     opacity: 100%;
 }
+#frame-1:hover ~ #page-1 .gull-ivar{
+    animation: slideFromLeft 1s ease-in-out 0s;
+}
+
+/*******************
+Frame 2
+*******************/
+/*Transition out Gull-Ivar*/
+#frame-2:hover ~ #page-1 .gull-ivar{
+    animation: slideFromBottom 1s ease-in-out 0s reverse;
+}
 
 #frame-2:hover ~ #page-2{
+    transition-delay: 1s;
     opacity: 100%;
 }
-#frame-2:hover ~ #background{
-    background-color: #4eadaf;
+#frame-2:hover ~ #page-1{
+    opacity: 0%;
 }
-
+#frame-2:hover ~ #page-1 .surface{
+    top: -20%;
+}
+#frame-2:hover ~ #page-2 .gull-ivar{
+    animation: slideFromBottom 2s ease-in-out 1s;
+    top: 53%;
+    left: 23%;
+}
+#frame-2:hover ~ #background{
+    background-color: #377a98;
+}
+/*******************
+Frame 3
+*******************/
+/*Transition out Gull-Ivar*/
+#frame-2:hover ~ #page-1 .gull-ivar{
+    animation: slideFromBottom 1s ease-in-out 0s reverse;
+}
 #frame-3:hover ~ #page-3{
     opacity: 100%;
 }
-#frame-3:hover ~ #background{
-    background-color: #4eadaf;
+#frame-3:hover ~ #page-1{
+    opacity: 0%;
 }
-
+#frame-3:hover ~ #page-1 .surface{
+    top: -20%;
+}
+#frame-3:hover ~ #background{
+    background-color: #377a98;
+}
+/*******************
+Frame 4
+*******************/
 #frame-4:hover ~ #page-4{
     opacity: 100%;
 }
-#frame-4:hover ~ #background{
-    background-color: #4eadaf;
+#frame-4:hover ~ #page-1{
+    opacity: 0%;
 }
-
+#frame-4:hover ~ #page-1 .surface{
+    top: -20%;
+}
+#frame-4:hover ~ #background{
+    background-color: #152069;
+}
+/*******************
+Frame 5
+*******************/
 #frame-5:hover ~ #page-5{
     opacity: 100%;
 }
-#frame-5:hover ~ #background{
-    background-color: #4eadaf;
+#frame-5:hover ~ #page-1{
+    opacity: 0%;
 }
-
+#frame-5:hover ~ #page-1 .surface{
+    top: -20%;
+}
+#frame-5:hover ~ #background{
+    background-color: #152069;
+}
+/*******************
+Frame 6
+*******************/
 #frame-6:hover ~ #page-6{
     opacity: 100%;
 }
-#frame-6:hover ~ #background{
-    background-color: #4eadaf;
+#frame-6:hover ~ #page-1{
+    opacity: 0%;
 }
-
+#frame-6:hover ~ #page-1 .surface{
+    top: -20%;
+}
+#frame-6:hover ~ #background{
+    background-color: #152069;
+}
+/*******************
+Animations
+*******************/
+@keyframes bounce{
+    0%{transform: translate(0px, 0px);}
+    50%{transform: translate(0px, -15px);}
+    100%{transform: translate(0px, 0px);}
+}
+@keyframes wave{
+    0%{
+        transform: translate(0px, 0px) rotate(-2deg);
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 0%;
+    }
+    50%{
+        transform: translate(0px, -15px)rotate(2deg);
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 50%;
+    }
+    100%{
+        transform: translate(0px, 0px)rotate(-2deg);
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 0%;
+    }
+}
 @keyframes slideFromBottom{
     0%{
         transform: translate(0px, 1500px);
+    }
+    75%{
+        transform: translate(0px, -30px);
     }
     100%{
         transform: translate(0px, 0px);
@@ -100,13 +203,19 @@ Slides
     0%{
         transform: translate(0px, -1500px);
     }
+    75%{
+        transform: translate(0px, 30px);
+    }
     100%{
         transform: translate(0px, 0px);
     }
 }
 @keyframes slideFromLeft{
     0%{
-        transform: translate(5000px, 0px);
+        transform: translate(-5000px, 0px);
+    }
+    75%{
+        transform: translate(30px, 0px);
     }
     100%{
         transform: translate(0px, 0px);
@@ -114,7 +223,10 @@ Slides
 }
 @keyframes slideFromRight{
     0%{
-        transform: translate(-5000px, 0px);
+        transform: translate(5000px, 0px);
+    }
+    0%{
+        transform: translate(-30px, 0px);
     }
     100%{
         transform: translate(0px, 0px);
