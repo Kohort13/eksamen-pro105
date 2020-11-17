@@ -1,7 +1,6 @@
 /*******************
 Custom content
 *******************/
-
 .page{
     transition-property: all;
     transition-duration: 1s;
@@ -24,6 +23,7 @@ Custom content
 }
 .gull-ivar{
     position: relative;
+    width: 30%;
     height: fit-content;
     top: 23%;
     left: 33%;
@@ -35,7 +35,6 @@ Custom content
     transform: scaleX(-1);
     position: relative;
     max-width: 70%;
-    max-height: 70%;
 }
 .sign{
     position: absolute;
@@ -69,100 +68,125 @@ Frame 1
 #frame-1:hover ~ #page-1{
     opacity: 100%;
 }
-#frame-1:hover ~ #page-1 .gull-ivar{
+#frame-1:hover ~ #page-1 #gi-1{
     animation: slideFromLeft 1s ease-in-out 0s;
 }
 
 /*******************
 Frame 2
 *******************/
-/*Transition out Gull-Ivar*/
-#frame-2:hover ~ #page-1 .gull-ivar{
+#whale-octo{
+    position:absolute;
+    height: 30%;
+    width: auto;
+    right: 20%;
+    top: 30%;
+}
+#page-2 #gi-2{
+    top: 53%;
+    left: 23%;
+}
+
+/*Transition out Gull-Ivar from frame-1*/
+#frame-2:hover ~ #page-1 #gi-1{
     animation: slideFromBottom 1s ease-in-out 0s reverse;
 }
+
 
 #frame-2:hover ~ #page-2{
     transition-delay: 1s;
     opacity: 100%;
 }
-#frame-2:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-2:hover ~ #page-1 .surface{
-    top: -20%;
-}
-#frame-2:hover ~ #page-2 .gull-ivar{
+#frame-2:hover ~ #page-2 #gi-2{
     animation: slideFromBottom 2s ease-in-out 1s;
-    top: 53%;
-    left: 23%;
 }
 #frame-2:hover ~ #background{
     background-color: #377a98;
 }
+
 /*******************
 Frame 3
 *******************/
-/*Transition out Gull-Ivar*/
-#frame-2:hover ~ #page-1 .gull-ivar{
+/*Transition out Gull-Ivar from frame-2*/
+#frame-3:hover ~ #page-2 #gi-2{
     animation: slideFromBottom 1s ease-in-out 0s reverse;
 }
 #frame-3:hover ~ #page-3{
     opacity: 100%;
 }
-#frame-3:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-3:hover ~ #page-1 .surface{
-    top: -20%;
-}
+
 #frame-3:hover ~ #background{
     background-color: #377a98;
 }
+
 /*******************
 Frame 4
 *******************/
 #frame-4:hover ~ #page-4{
     opacity: 100%;
 }
-#frame-4:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-4:hover ~ #page-1 .surface{
-    top: -20%;
-}
 #frame-4:hover ~ #background{
     background-color: #152069;
 }
+
 /*******************
 Frame 5
 *******************/
 #frame-5:hover ~ #page-5{
     opacity: 100%;
 }
-#frame-5:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-5:hover ~ #page-1 .surface{
-    top: -20%;
-}
 #frame-5:hover ~ #background{
     background-color: #152069;
 }
+
 /*******************
 Frame 6
 *******************/
 #frame-6:hover ~ #page-6{
     opacity: 100%;
 }
+#frame-6:hover ~ #background{
+    background-color: #152069;
+}
+
+/*******************
+Hiding frame 1 and surface on all other frames
+*******************/
+#frame-2:hover ~ #page-1{
+    opacity: 0%;
+}
+#frame-2:hover ~ #page-1 .surface{
+    top: -20%;
+}
+
+#frame-3:hover ~ #page-1{
+    opacity: 0%;
+}
+#frame-3:hover ~ #page-1 .surface{
+    top: -20%;
+}
+
+#frame-4:hover ~ #page-1{
+    opacity: 0%;
+}
+#frame-4:hover ~ #page-1 .surface{
+    top: -20%;
+}
+
+#frame-5:hover ~ #page-1{
+    opacity: 0%;
+}
+#frame-5:hover ~ #page-1 .surface{
+    top: -20%;
+}
+
 #frame-6:hover ~ #page-1{
     opacity: 0%;
 }
 #frame-6:hover ~ #page-1 .surface{
     top: -20%;
 }
-#frame-6:hover ~ #background{
-    background-color: #152069;
-}
+
 /*******************
 Animations
 *******************/
