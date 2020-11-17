@@ -27,6 +27,7 @@ Speech Bubbles
 ****************************/
 .speech-bubble{
     width: fit-content;
+    position: absolute;
 }
 .bubble-text{
     z-index: 3;
