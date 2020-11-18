@@ -9,12 +9,9 @@
 </head>
 <body>
     <div id="root">
-        <!--
-            Frame er en boks som dekker hele skjermen, men de har ikke 100% høyde - altså kan man "scrolle" gjennom de. De er ikke synlige, 
-            men brukes til å trigge frame-n:hover. Hver frame har sin egen nav-buttons div. Disse har ikke fixed position, men er alltid på toppen av skjermen.
-            Når man hopper til neste page vil man effektivt scrolle ned til neste frame-id, og da vil de neste knappene vises.
-        -->
-
+        <!--*********************************************************
+                                 FRAME 1
+        **********************************************************-->
         <!--Welcome to the Great Barrier Reef-->
         <div class="frame" id="frame-1">
             <div class="nav-buttons">
@@ -47,7 +44,9 @@
                 </div>
             </div>
         </div>
-        
+        <!--*********************************************************
+                                 FRAME 2
+        **********************************************************-->
         <!--Fun Facts w/ Gull-Ivar-->
         <div class="frame" id="frame-2">
             <div class="nav-buttons">
@@ -82,6 +81,9 @@
             </div>
         </div>
 
+        <!--*********************************************************
+                                 FRAME 3
+        **********************************************************-->
         <!--A deeper dive into a couple of subject close to  Gull-Ivar's heart-->
         <div class="frame" id="frame-3">
             <div class="nav-buttons">
@@ -167,12 +169,6 @@
             </div>
         </div>
         
-        <!--
-            Elementet under har fixed position og er satt til å være 100% height og width. Alt grafisk innhold man
-            vil vise MÅ ligge inni denne. Den passer på at du har kontroll over hvor ting er på skjermen.
-            Alle div'er som ligger inni vil arve posisjon. M.a.o vil de forbli på samme sted 
-            på skjermen når man scroller. For å bytte hvilken "page" man ser kan man sette opacity på individuelle page-n.    
-        -->
 
         <!--*********************************************************
                                  FRAME 1
