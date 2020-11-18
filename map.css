@@ -1,0 +1,60 @@
+/*HANNA*/
+
+/*SETTING BACKROUND IMAGE*/
+body{
+    background-image: url("images/map.jpg");
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*STYLING LINKS*/
+.link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.pin-img{
+    width: 50px;
+    margin: none;
+    padding: none;
+}
+
+
+/*POSITIONS*/
+#great-barrier-reef{
+    top: 450px;
+    left: 930px;
+    position: relative;
+}
+
+#lion-city{
+    top: 215px;
+    left: 890px;
+    position: relative;
+}
+
+#mariana-trench{
+    top: 250px;
+    left: 920px;
+    position: relative;
+}
+
+#titanic{
+    top: 85px;
+    left: 390px;
+    position: relative;
+}
+
+#under{
+    top: 5px;
+    left: 570px;
+    position: relative;
+}
+
+/**/
+
+/*GULLIVAR*/
