@@ -25,6 +25,8 @@ All elements inside a frame must be inside a container for the page to work, sin
     transform: scale(0);
     height: fit-content;
     width: fit-content;
+    top: 0%;
+    left: 0%;
 }
 /* Showing the elements of a frame when the frame is hovered */
 .frame:hover .container {
