@@ -44,34 +44,6 @@
 
 }
 
-
-/* .frame-1 {
-    transition-property: all;
-    transition-duration: 1s;
-    background-color: #377A98;
-    background-image: url(images/column.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    
-
-
-} */
-
-/* #frame-2 {
-    z-index: 1;
-    background-image: url(images/lion.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-attachment: fixed;
-
-}  */
-
-.frame-2 {
-    width: max-content;
-}
-
 .gullivar-thex-img {
     /* width: 200px;
     height: 200px;
@@ -111,8 +83,11 @@
 #bbl-1 {
     left: 30%;
     font-size: 35px;
-    animation: speechBubble 2s ease-in-out 0s infinite;
-
+    
+}
+.frame:hover .container.gullivar .speech-bubble{
+    animation: speechBubble 4s ease-in-out 0s;
+    animation-fill-mode: forwards;
 }
 
 #bbl-3 {
@@ -144,49 +119,18 @@
 
 }
 
-/* got this code tips from Magnus, line: 60-79 */
-#frame-1:hover .speech-bubble#bbl1 {
-    animation-name: speechBubble;
-    animation-delay: 1s;
-    animation-duration: 1s;
-}
-
 @keyframes speechBubble {
     0% {
         opacity: 0%;
         transform: translate(0px, 0px);
     }
 
-    10% {
-        opacity: 0%;
-        transform: translate(0px, 0px);
-    }
-
-    20% {
-        opacity: 0%;
-        transform: translate(0px, 0px);
-
-    }
-
-    100% {
+    25% {
         opacity: 100%;
-        transform: translate(0px, -2000px);
-    }
-}
-
-#frame-2:hover .speech-bubble#bbl3 {
-    animation-name: speechBubble;
-    animation-delay: 5s;
-    animation-duration: 5s;
-}
-
-@keyframes speechBubble {
-    0% {
-        opacity: 0%;
         transform: translate(0px, 0px);
     }
 
-    20% {
+    75%{
         opacity: 100%;
         transform: translate(0px, 0px);
     }
@@ -197,20 +141,8 @@
     }
 }
 
-#speech-bubble-3:hover {
+#gte-2 div.hover-bounce-effect:hover {
     animation: bounce 5s ease-in-out 0ms infinite;
-}
-
-#speech-bubble-3:hover .bubble-text::after {
-    /* content: '\A\A Hah! Jeg reagerer også på hover ;)'; */
-    /* OBS OBS OBS OBS
-    
-    
-    Ikke bruk white-space i de faktiske filene, er bare med som en visual joke 
-    
-    
-    */
-    white-space: pre;
 }
 
 @keyframes bounce {
