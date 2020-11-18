@@ -10,9 +10,7 @@
     background: url(images/column.png) no-repeat fixed center;
     background-size: cover;
 }
-.container {
-    border: 3px solid red;
-}
+
 .container.background {
 
     height: 100%;
