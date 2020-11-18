@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="lion-city.css">
-    <title>Konsept frames</title>
+    <title>Lion City</title>
 </head>
 
 <body>
     <div id="root">
+        <div class="frame" id="background"></div>
         <!--
             Frame er en boks som dekker hele skjermen, men de har ikke 100% høyde - altså kan man "scrolle" gjennom de. De er ikke synlige, 
             men brukes til å trigge frame-n:hover. Hver frame har sin egen nav-buttons div. Disse har ikke fixed position, men er alltid på toppen av skjermen.
@@ -21,6 +22,19 @@
                 <a href="#frame-1"></a>
                 <a href="#frame-2"></a>
             </div>
+            <div class="container background"></div>
+            <div class="container gullivar" id="gte-1">
+                <div class="speech-bubble" id="bbl-1">
+                    <div class="bubble-text">
+                        De sier at denne byen var en gang politisk og forrettnings senter. Lurer på om det finnes skatt
+                        her!! hmm...
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+                <div class="gullivar-thex-img">
+                    <img src="images/Gullivar_The_Explorer.png" alt="gullivar">
+                </div>
+            </div>
         </div>
         <div class="frame" id="frame-2">
 
@@ -28,8 +42,32 @@
                 <a href="#frame-1"></a>
                 <a href="#frame-3"></a>
             </div>
+            <div class="container background"></div>
+
+            <div class="container lion">
+                <div class="speech-bubble" id="bbl-1">
+                    <div class="bubble-text">Jeg har vært i 131 meters dybde under vann og omgitt av fisk og andre
+                        sjødyr i
+                        61 år. I 1959 måtte Shi Cheng vannkraft bygges, noe som også betydde at det var nødvendig med en
+                        menneskeskapt demning. </div>
+                    <div class="arrow"></div>
+                </div>
+                <img src="images/lion.png">
+            </div>
+            
+            <div class="container gullivar"  id="gte-2">
+                <div class="speech-bubble" id="bbl-3">
+                    <div class="bubble-text">
+                        Wow!!!
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+                <div class="gullivar-thex-img">
+                    <img src="images/Gullivar_The_Explorer.png" alt="gullivar">
+                </div>
+            </div>
         </div>
-        <div class="frame" id="frame-3">
+        <!-- <div class="frame" id="frame-3">
             <div class="nav-buttons">
                 <a href="#frame-2"></a>
                 <a href="#frame-4"></a>
@@ -40,55 +78,16 @@
                 <a href="#frame-3"></a>
                 <a href="#frame-4"></a>
             </div>
-        </div>
-      
+        </div> -->
+
         <!--
             Elementet under har fixed position og er satt til å være 100% height og width. Alt grafisk innhold man
             vil vise MÅ ligge inni denne. Den passer på at du har kontroll over hvor ting er på skjermen.
             Alle div'er som ligger inni vil arve posisjon. M.a.o vil de forbli på samme sted 
             på skjermen når man scroller. For å bytte hvilken "page" man ser kan man sette opacity på individuelle page-n.    
         -->
-        <div class="page" id="page-1">
-            <div id="bbl-1">
-                <div class="speech-bubble">
-                    <div class="bubble-text">
-                        De sier at denne byen var en gang politisk og forrettnings senter. Lurer på om det finnes skatt
-                        her!! hmm...
-                    </div>
-                    <div class="arrow"></div>
-                </div>
-                    <img src="images/Gullivar_The_Explorer.png" alt="gullivar" id="gullivar-thex-img">
-            </div>
-        </div>
-        <div class="page" id="page-2" class="page-2">
-            <div class="speech-bubble" id="bbl-2">
-                <div class="bubble-text">Jeg har vært i 131 meters dybde under vann og omgitt av fisk og andre sjødyr i
-                    61 år. I 1959 måtte Shi Cheng vannkraft bygges, noe som også betydde at det var nødvendig med en
-                    menneskeskapt demning. </div>
-                <div class="arrow"></div>
-            </div>
 
-            <div id="bbl-3">
-                <div class="speech-bubble" id="bbl-text-3">
-                    <div class="bubble-text">
-                        Wow!!!
-                    </div>
-                    <div class="arrow"></div>
-                </div>
-                <div id="gull-thex-container">
-                     <img src="images/Gullivar_The_Explorer.png" alt="gullivar" id="gullivar-p2-img">
-                     </div>
-            </div>
-        </div>
 
-        <!-- <div class="page" id="page-3">
-            <img src="images/column.png" alt="clomun-2" class="column-2" id="column-2">
-
-        </div>
-
-        <div class="page" id="page-4">
-            <img src="images/stair.png" alt="stair" class="stair">
-        </div> -->
     </div>
 </body>
 
