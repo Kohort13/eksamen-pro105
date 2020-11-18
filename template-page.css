@@ -1,0 +1,102 @@
+/*************************
+    DEBUG/UTVIKLERMODUS + TIPS
+
+    HUSK Å SLETTE MEG FØR INNLEVERING!!!!
+*************************/
+
+
+/* VIS ALLE ELEMENTER I EN FRAME UTEN Å BRUKE HOVER - BRUK DETTE TIL Å LAGE LAYOUT PER FRAME: */
+#frame-id .container{
+    transform: scale(1);
+}
+/* GENERÉR RØD BORD RUNDT ALLE CONTAINERE: */
+.container{
+    border: 3px solid red;
+}
+
+/* HVIS DU VIL AT EN CONTAINER SKAL DEKKE HELE SKJERMEN: */
+#container-id{
+    width: 100%;
+    height: 100%;
+}
+
+/* HVIS DU VIL POSISJONERE EN CONTAINER FRA BUNN OG HØYRE I STEDET FOR TOPP OG VENSTRE: */
+#container-id{
+    top: auto;
+    right: 20%;
+    bottom: 15%;
+    left: auto;
+}
+
+/*  HVIS DU VIL FLYTTE PLASSERINGEN TIL "PILEN" TIL EN SNAKKEBOBLE TIL VENSTRE SIDE: */
+#container-id .speech-bubble .arrow{
+    left: -5px;
+    bottom: 70px;
+    transform: rotate(135deg);
+}
+
+/* HVIS DU VIL ANIMERE TING I EN FRAME NÅR DU HOVRER PÅ SELVE FRAMEN (MÅ IKKE VÆRE DIV, KAN
+VÆRE HVILKEN SOM HELST TAG DU VIL): */
+#frame-id:hover #container-id div{
+    transform: scale(1.2);
+}
+
+/* HVIS DU VIL STILSETTE MANGE CONTAINERE LIKT UTEN Å GI ALLE UNIK ID (PASS PÅ AT DET IKKE ER MELLOMROM MELLOM KLASSENE): */
+.container.class-x{
+    background-color: violet;
+}
+/* ^ I HTML MÅ DU SKRIVE class="container class-x" FOR AT DET SKAL VIRKE. DETTE GJØR AT MAN KOMBINERER KLASSER. class-x 
+KAN VÆRE HVA ENN DU VIL, SÅ LENGE DET IKKE ER CONTAINER */
+.container.background{
+    border: none;
+    height: 100%; 
+    width: 100%;
+    background: url(images/titanic.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+/*************************
+    ^ HUSK Å SLETTE MEG FØR INNLEVERING!!!!
+*************************/
+
+
+body{
+    background-color: skyblue;
+}
+.container.spch-bbl{
+    top: 10%;
+    left: 35%;
+}
+#speech-bubble-1{
+    top: 30%;
+    left: 15%;
+}
+#speech-bubble-2{
+    top: auto;
+    left: auto;
+    bottom: 22%;
+    right: 14%;
+}
+
+#speech-bubble-3:hover{
+    animation: bounce 1s ease-in-out 0ms infinite;
+}
+
+
+
+#speech-bubble-3:hover .bubble-text::after{
+    content: '\A\A Hah! Jeg reagerer også på hover ;)';
+    /* OBS OBS OBS OBS
+    
+    
+    Ikke bruk white-space i de faktiske filene, er bare med som en visual joke 
+    
+    
+    */
+    white-space: pre;
+}
+
+@keyframes bounce{
+    0%{transform: translate(0px, 0px);}
+    50%{transform: translate(0px, -15px);}
+    100%{transform: translate(0px, 0px);}
+}
