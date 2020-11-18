@@ -6,10 +6,10 @@ GENERAL
 
   body, html{
     height: 100%;
-    background-image: url("images/titanic.jpg");
-    background-position: center;
+    background-image: url("/images/titanic.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    background-repeat: repeat;
   }
 
   
@@ -21,20 +21,21 @@ GULLIVAR
   }
 
   .container.gull-ivar {
+    border:solid red 3px;
     animation: float 3s linear infinite;
-    position: absolute;
+    position: fixed;
     width: 15%;
-    left: 80%;
-    top: 40%;
-    height: fit-content;
+    left: 60%;
+    top: 30%;
+    */
   }
 
   @keyframes float {
     0%, 100% {
-      top: 50%;
+      top: 20%;
     }
     50% {
-      top: 53%;
+      top: 23%;
     }
   }
 

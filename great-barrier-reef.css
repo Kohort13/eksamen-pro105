@@ -6,14 +6,40 @@ body {
     text-align: center;
     color: white;
 }
+.container {
+    border: solid 3px red;
+}
+.container#welcome-gbr  {
+    /*border: solid red 3px;*/
+    text-align: center;
+    /*height: 20%;*/
+    width: 100%;
+    top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; /* aligns on vertical for column */
+    align-items: center; /* aligns on horizontal for column */
+}
 
+.container#fun-facts-gull-ivar {
+    /*border: solid red 3px;*/
+    text-align: center;
+    /*height: 20%;*/
+    width: 100%;
+    top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; /* aligns on vertical for column */
+    align-items: center; /* aligns on horizontal for column */
+}
 p {
-    font-size: 18px;
+    font-size: 20px;
 }
 .dark-background {
     display: inline;
     background-color: rgba(9, 52, 100, 0.8);
     opacity: 1;
+    font-size: 20px;
 }
 #gull-ivar-flipped {
     transform: scaleX(-1);
@@ -34,7 +60,9 @@ p {
     100% {left: -600px}
 }
 #space-ivar {
-    height: 30%;
+    transform: scale(0.5);
+    position: fixed;
+    top: 350px;
 }
 #frame-1:hover ~ #page-1{
     opacity: 100%;
