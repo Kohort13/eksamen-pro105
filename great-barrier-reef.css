@@ -10,9 +10,9 @@ body {
 p {
     font-size: 18px;
 }
-div.dark-background {
-    text-align: center;
-    background: rgba(000, 000, 000, 0.6);
+.dark-background {
+    display: inline;
+    background-color: rgba(9, 52, 100, 0.8);
     opacity: 1;
 }
 #gull-ivar-flipped {
