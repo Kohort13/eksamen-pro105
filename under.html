@@ -9,17 +9,76 @@
 </head>
 <body>
     <div id = "root">
+        <div class = "frame" id = "background"></div>
         <!--
             Frame er en boks som dekker hele skjermen, men de har ikke 100% høyde - altså kan man "scrolle" gjennom de. De er ikke synlige, 
             men brukes til å trigge frame-n:hover. Hver frame har sin egen nav-buttons div. Disse har ikke fixed position, men er alltid på toppen av skjermen.
             Når man hopper til neste page vil man effektivt scrolle ned til neste frame-id, og da vil de neste knappene vises.
         -->
-        <div class = "frame" id = "frame-1">
-            <div class = "nav-buttons">
-                <a href = "#frame-1"></a>
-                <a href = "#frame-2"></a>
+
+        <!-- 
+            Frame 1: Welcome! 
+        -->
+
+        <div class="frame" id="frame-1">
+            <div class="nav-buttons">
+                <a href="#frame-1"></a>
+                <a href="#frame-2"></a>
+            </div>
+            <div class="container background"></div>
+            <div class="container gull-ivar" id="gull-1">
+                <div class="speech-bubble" id="bbl-01">
+                    <div class="bubble-text">
+                        Velkommen til Under restaurant!
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+                <div class="speech-bubble" id="bbl-02">
+                    <div class="bubble-text">
+                        <b style = "color: #152069;">Under</b> er verdens største undervanns restuarant som ligger i Lindesnes, Norge.
+                    Resturanten har blitt et stort turist spot for alle havets skapninger. 
+                    Det er egentlig ganske merkelig at menneskene har laget et akvariet hvor vi fisk kan studere de. 
+                    Mange fisk som jobber med biologi eller som er spesielt interessert i mennesker reiser hit da vi kan studere menneskene på trygg avstand.
+                    Som vi alle vet et menneskene et av de skumleste rovdyrene. De spiser mesteparten av andre dyr inkludert fisk og skalldyr. Dette er noe av maten som blir servert på under
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+                <div class="img-container">
+                    <img src="images/Gullivar.png" alt = "gull-ivar">
+                </div>
             </div>
         </div>
+
+        <!-- 
+            Frame 2: Gull-Ivar Introduces Under
+        -->
+
+        <div class="frame" id="frame-2">
+            <div class="nav-buttons">
+                <a href="#frame-1"></a>
+                <a href="#frame-3"></a>
+            </div>            
+            <div class="container gull-ivar" id="gull-2">
+                <div class="speech-bubble">
+                    <div class="bubble-text">
+                        Dette er en snakkeboble på page 2. Den bruker også "default" posisjon. Legg merke til at du kan markere teksten i meg, og jeg forsvinner ikke! 
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="container spch-bbl" id="speech-bubble-2">
+                <div class="speech-bubble">
+                    <div class="bubble-text">
+                        Dette er også en snakkeboble på page 2. Som dere ser blir den røde boksen større når man har et større objekt i den. Neato!
+                        <br><br>
+                        (OBS! Dette virker bare hvis objekter som ligger inni containeren har position: relative!)
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------->
         <div class = "frame" id = "frame-2">
             <div class = "nav-buttons">
                 <a href = "#frame-1"></a>
@@ -49,7 +108,7 @@
         <!-- 
             Welcome to Under
          -->
-        <div class = "page" id = "background">
+        <!-- <div class = "page" id = "background">
         </div>
         
         <div class= "page" id = "page-1">
@@ -64,13 +123,13 @@
                     <img src = "images/Gullivar.png" alt = "gull-ivar">
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--         
             Gull-ivar introduces the Restaurant 
         -->
 
-        <div class = "page" id = "page-2">
+        <!-- <div class = "page" id = "page-2">
             <div class = "gull-ivar">
                 <div class = "speech-bubble" id = "bbl-02">
                     <div class = "bubble-text"> 
@@ -86,13 +145,13 @@
                     <img src = "images/Gullivar_The_Tourist.png" alt = "gull-ivar">
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--         
             Gull-ivar meets LakseLars 
         -->
 
-        <div class = "page" id = "page-3">
+        <!-- <div class = "page" id = "page-3">
             <div class = "gull-ivar">
                 <div class = "speech-bubble" id = "bbl-02">
                     <div class = "bubble-text">
@@ -129,10 +188,10 @@
                     <img src = "images/laksMaske.png" alt = "lakselars">
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Gullivar learns from lakselars -->
-
+<!-- 
         <div class = "page" id = "page-4">
             <div class = "gull-ivar-2">
                 <div class = "speech-bubble" id = "bbl-02">
@@ -145,7 +204,7 @@
                     <img src = "images/Gullivar_The_Tourist.png" alt = "gull-ivar">
                 </div>
             </div>
-        </div>      
+        </div>       -->
         
     </div>    
         
