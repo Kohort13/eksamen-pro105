@@ -82,38 +82,7 @@ p, #dark-background{
     bottom: auto;
     width: auto;
 }
-#frame-1:hover ~ #page-1{
-    opacity: 100%;
-}
-#frame-2:hover ~ #page-2{
-    opacity: 100%;
-}
-#frame-3:hover ~ #page-3{
-    opacity: 100%;
-    z-index: 2;
-}
-.card-front:hover .card-back:hover ~ #frame-3{
-    opacity: 100%;
-}
-.page{
-    transition-property: all;
-    transition-duration: 1s;
-}
 
-.page1{
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0%;
-    transition-property: all;
-    transition-duration: 1s;
-}
-.page1 *{
-    position: relative;
-}
 
 
 
@@ -123,6 +92,10 @@ p, #dark-background{
 ***************************************/
 
 /*Styles the actual cards*/
+
+.container#flip-container{
+    width: 100%;
+}
 .flip-card {
     background-color: transparent;  
     width: 90%;
