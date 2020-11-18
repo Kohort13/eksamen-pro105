@@ -9,7 +9,7 @@ body {
 .container {
     border: solid 3px red;
 }
-.container#welcome-gbr  {
+.container#welcome-gbr, .container#fun-facts-gull-ivar  {
     /*border: solid red 3px;*/
     text-align: center;
     /*height: 20%;*/
@@ -20,26 +20,42 @@ body {
     justify-content: center; /* aligns on vertical for column */
     align-items: center; /* aligns on horizontal for column */
 }
-
 .container#fun-facts-gull-ivar {
     /*border: solid red 3px;*/
     text-align: center;
     /*height: 20%;*/
     width: 100%;
     top: 5%;
+    bottom: auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center; /* aligns on vertical for column */
     align-items: center; /* aligns on horizontal for column */
 }
-p {
-    font-size: 20px;
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p, #dark-background{
+    font-size: 25px;
 }
 .dark-background {
     display: inline;
     background-color: rgba(9, 52, 100, 0.8);
+}
+
+.dark-background1, .dark-background2 {
+    display: inline;
+    background-color: rgba(9, 52, 100, 0.8);
     opacity: 1;
-    font-size: 20px;
 }
 #gull-ivar-flipped {
     transform: scaleX(-1);
@@ -62,7 +78,9 @@ p {
 #space-ivar {
     transform: scale(0.5);
     position: fixed;
-    top: 350px;
+    top: 70%;
+    bottom: auto;
+    width: auto;
 }
 #frame-1:hover ~ #page-1{
     opacity: 100%;
@@ -97,16 +115,7 @@ p {
     position: relative;
 }
 
-.flip-card-grid{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border-radius: 30px;
-    justify-items: stretch;
-    height: 500px;
-    min-width: 80%;
-    margin: 30px;
-    padding: 30px 0px 30px 0px;
-}
+
 
 /***************************************
     FLIP CARDS
@@ -118,6 +127,17 @@ p {
     background-color: transparent;  
     width: 90%;
     height: 100%;
+}
+
+.flip-card-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 30px;
+    justify-items: stretch;
+    height: 500px;
+    min-width: 80%;
+    margin: 30px;
+    padding: 30px 0px 30px 0px;
 }
 
 /* This container is needed to position the front and back side */
@@ -161,5 +181,12 @@ p {
     background-color: #009dc4;
     color: #FFF;
     transform: rotateY(180deg);
+    border-radius: 100px;
+}
+
+.card-front img{
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover; */
     border-radius: 100px;
 }
