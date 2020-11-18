@@ -4,67 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="individual-page.css">
-    <title>Konsept frames</title>
+    <link rel="stylesheet" href="template-page.css">
+    <title>Mal for slideshow</title>
 </head>
 <body>
     <div id="root">
         <!--
-            Frame er en boks som dekker hele skjermen, men de har ikke 100% høyde - altså kan man "scrolle" gjennom de. De er ikke synlige, 
-            men brukes til å trigge frame-n:hover. Hver frame har sin egen nav-buttons div. Disse har ikke fixed position, men er alltid på toppen av skjermen.
-            Når man hopper til neste page vil man effektivt scrolle ned til neste frame-id, og da vil de neste knappene vises.
+            LES MEG!
+
+            Dette er en forenkling av løsningen vi har hatt til nå. I stedet for å tukle med .page ligger alt i frame i stedet. Dette gjør at vi kan bruke hover 
+            på alle gjenstander, men frame brukes fremdeles til å vise og skjule ting. For å konvertere til det nye oppsettet må dere altså flytte ting som ligger i 
+            page-div'ene inn i frame-div'en som korresponderer. 
+            
+            Det viktigste dere må passe på er at ALLE elementer SKAL være plassert i en <div class="container">. 
+            Det er disse som gjør at man kan posisjonere ting fritt innenfor viewporten. De brukes også til å automatisk vise og skjule ting basert på hvilken frame 
+            man hovrer over. M.a.o, hvis dere ikke legger ting i en container kommer ikke siden til å virke som den skal.
+            Som utgangspunkt plasseres alle containere øverst til venstre på siden, så dere må plassere dem individuelt ved hjelp av id (eller med kombinerte klasser,
+            se eksempel med snakkeboblene under)
+            
+            Alle elementer skal ligge etter nav-buttons div'en, for ordens skyld (se eksempel under). nav-buttons har z-index: 100, så ting vil ikke vises over dem, 
+            men er ryddigere på denne måten. Obs: Rekkefølgen på container-div'er har betydning for layout. Div'en lengst ned i en frame vil overlappe de som er plassert 
+            høyere i samme frame.
+
+            I de individuelle CSS-filene må det nok dessverre gjøres noen endringer for at dette skal virke. I hovedsak kan dere fjerne alle 
+            #frame-id:hover ~ #page-id {} blokkene - dette gjøres nå automatisk, så de trengs ikke lenger. 
+                
+            *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+            *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+            *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+            
+            Bakgrunnsbilde:
+            Hvis dere vil ha samme bakgrunnsbilde på alle frames kan dere bruke body{background-image: "images/name-of-image";}. Ellers anbefaler jeg å bruke en container
+            til å ha bakgrunnsbildet i, hvis dere vil ha forskjellig bilde på forskjellige frames. Så lenge det er den "øverste" containeren i en frame vil det fungere som et bakgrunnsbilde
+
+            Animering av posisjon:
+            Jeg har brukt transform: scale(0) til å skjule objekter, så det er ikke garantert at dere kan bruke transform på en container for å animere posisjonen dens.
+            Hvis dere har problemer med det, lag en til div inni containeren, og legg det dere vil animere inn i den. Da har containeren samme sted på skjermen, og dere kan animere
+            den nøstede div'en
+
         -->
+        
         <div class="frame" id="frame-1">
             <div class="nav-buttons">
                 <a href="#frame-1"></a>
                 <a href="#frame-2"></a>
             </div>
+            <div class="container background"></div>
+            <div class="container spch-bbl">
+                <div class="speech-bubble">
+                    <div class="bubble-text">
+                        Dette er en snakkeboble på page 1. Den bruker "default" posisjon (må defineres i de individuelle CSS-filene)
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="container spch-bbl" id="speech-bubble-1">
+                <div class="speech-bubble">
+                    <div class="bubble-text">
+                        Dette er også en snakkeboble på page 1. Den får posisjon gjennom #id{}
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="container" id="centered">
+                <div>Dette er en div som er sentrert i en container</div>
+            </div>
         </div>
+
+
         <div class="frame" id="frame-2">
             <div class="nav-buttons">
                 <a href="#frame-1"></a>
                 <a href="#frame-3"></a>
+            </div>            
+            <div class="container spch-bbl" id="speech-bubble-3">
+                <div class="speech-bubble">
+                    <div class="bubble-text">
+                        Dette er en snakkeboble på page 2. Den bruker også "default" posisjon. Legg merke til at du kan markere teksten i meg, og jeg forsvinner ikke! 
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="container spch-bbl" id="speech-bubble-2">
+                <div class="speech-bubble">
+                    <div class="bubble-text">
+                        Dette er også en snakkeboble på page 2. Som dere ser blir den røde boksen større når man har et større objekt i den. Neato!
+                        <br><br>
+                        (OBS! Dette virker bare hvis objekter som ligger inni containeren har position: relative!)
+                    </div>
+                    <div class="arrow"></div>
+                </div>
             </div>
         </div>
-        <div class="frame" id="frame-3">
-            <div class="nav-buttons">
-                <a href="#frame-2"></a>
-                <a href="#frame-4"></a>
-            </div>
-        </div>
-        <div class="frame" id="frame-4">
-            <div class="nav-buttons">
-                <a href="#frame-3"></a>
-                <a href="#frame-4"></a>
-            </div>
-        </div>
+
+
         
-        <!--
-            Elementet under har fixed position og er satt til å være 100% height og width. Alt grafisk innhold man
-            vil vise MÅ ligge inni denne. Den passer på at du har kontroll over hvor ting er på skjermen.
-            Alle div'er som ligger inni vil arve posisjon. M.a.o vil de forbli på samme sted 
-            på skjermen når man scroller. For å bytte hvilken "page" man ser kan man sette opacity på individuelle page-n.    
-        -->
-        <div class="page" id="page-1">
-            <!--
-                Mal for snakkeboble. Den består av tre div-tags: en container, en for teksten, og en for "pilen". 
-                Pass på at bubble-text og arrow ligger inne i en speech-bubble.
-                Du kan endre plasseringen av en boble gjennom id'en.
-            -->
-            <div class="speech-bubble" id="bbl-1">
-                <div class="bubble-text">Legg inn teksten til snakkeboblen her!</div>
-                <div class="arrow"></div>              
-            </div>
-            <div class="speech-bubble" id="bbl-2">
-                <div class="bubble-text">Legg inn teksten til snakkeboblen her!</div>
-                <div class="arrow"></div>              
-            </div>
-        </div>
-        <div class="page" id="page-2">
-            <p>Dette ser rart ut</p>
-        </div>
-        <div class="page" id="page-3"></div>
-        <div class="page" id="page-4"></div>
     </div>    
 </body>
 </html>
