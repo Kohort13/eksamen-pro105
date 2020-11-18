@@ -39,6 +39,8 @@ Speech Bubbles
     border-radius: 15px;
     background-color: #fff;
     word-wrap: normal;
+    /* Snakkeboblen kan få skygge, hvis det er lov i CSS */
+    /* box-shadow: 5px -7px 12px  rgba(0,0,0,0.6); */
 }
 .arrow{
     position: relative;
@@ -50,6 +52,7 @@ Speech Bubbles
     left: 10%;
     background-color: #fff;
     border-radius: 0 0 4px 0;
+    /* box-shadow: 5px -7px 12px  rgba(0,0,0,0.6); */
 }
 
 /****************************
