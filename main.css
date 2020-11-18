@@ -64,7 +64,7 @@ SPEECH BUBBLES
 /* Master container for a speech bubble */
 .speech-bubble{
     width: fit-content;
-    position: absolute;
+    position: relative;
 }
 /* The text-element of a speech bubble */
 .bubble-text{
@@ -83,6 +83,7 @@ SPEECH BUBBLES
 /* The pointer element of a speech bubble */
 .arrow{
     position: relative;
+    margin: 0 0 -30px 0;
     z-index: 4;
     transform: rotate(45deg);
     height: 40px;
