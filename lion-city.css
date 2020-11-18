@@ -1,16 +1,17 @@
 #frame-1:hover~#page-1 {
     opacity: 100%;
 }
+
 #frame-2:hover~#page-2 {
     opacity: 100%;
 }
-/* #frame-3:hover~#page-3 {
-    opacity: 100%;
-} */
-/*velger bakgrunsfarge for alle sider*/
+
+/*Celect background color for the whole page*/
 body {
     background-color: #377A98;
 }
+
+/* deactivated the transition to ease the visibility*/
 #page-1 {
     /* transition-property: all;*/
     /* transition-duration: 1s; */
@@ -18,8 +19,10 @@ body {
     background-image: url(images/column.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
+
 }
+
 #page-2 {
     background-color: #377A98;
     background-image: url(images/lion.png),
@@ -27,86 +30,101 @@ body {
     background-repeat: no-repeat;
     background-size: contain, cover;
     background-position: center;
+
 }
+
 .page-2 {
     width: max-content;
 }
-/* .gullivar-at-gate {
-    width: 20%;
-    height: 20%;
+
+#gullivar-thex-img {
+    width: 200px;
+    height: 200px;
     position: relative;
     left: 60%;
     top: 50%;
-} */
-/* #bbl-1 {
-    top: 300px;
-    left: 300px;
+}
 
-} */
+#gullivar-p2-img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 60%;
+    top: 50%;
+
+}
+
+#bbl-1 {
+    padding-left: 800px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 25%;
+    left: 0%;
+}
+
 #page-2 #bbl-2 {
     top: 0%;
-    left: 60%;
+    left: 55%;
     width: 400px;
     height: 400px;
 }
-#bbl-3 {
-    top: 30%;
+
+#bbl-text-3 {
     left: 50%;
-}
-/* .img-container {
-
-    width: 100px;
-    height: 100px;
-} */
-/* #gullivar-image {
-    border: 2px solid black;
-    
-    position: relative;
-} */
-.gull-ivar{
-    padding-left: 500px;
-    width: 30%;
-    height: 30%;
-    position: relative;
-    top: 25%;
-    left: 25%;
+    top: 50%;
 
 }
+
+#gull-thex-container {
+    top: 50%;
+    padding-top: 30%;
+}
+
+
+
 /* got this code tips from Magnus, line: 60-79 */
 #frame-1:hover~#page-1 #bbl-1 {
     animation-name: speechBubble;
     animation-delay: 5s;
     animation-duration: 5s;
 }
+
 @keyframes speechBubble {
     0% {
         opacity: 0%;
         transform: translate(0px, 0px);
     }
+
     20% {
         opacity: 100%;
         transform: translate(0px, 0px);
 
     }
+
     100% {
         opacity: 100%;
         transform: translate(0px, -2000px);
     }
 }
+
 #frame-2:hover~#page-2 #bbl-3 {
     animation-name: speechBubble;
     animation-delay: 1s;
     animation-duration: 5s;
 }
+
 @keyframes speechBubble {
     0% {
         opacity: 0%;
         transform: translate(0px, 0px);
     }
+
     20% {
         opacity: 100%;
         transform: translate(0px, 0px);
     }
+
     100% {
         opacity: 100%;
         transform: translate(0px, -2000px);

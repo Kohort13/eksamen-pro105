@@ -41,13 +41,7 @@
                 <a href="#frame-4"></a>
             </div>
         </div>
-        <!-- hvis jeg skal ha flere frames må bytte #fram4 til 5 på linje 41. -->
-        <!-- <div class="frame" id="frame-5">
-            <div class="nav-buttons">
-                <a href="#frame-4"></a>
-                <a href="#frame-5"></a>
-            </div>
-        </div> -->
+      
         <!--
             Elementet under har fixed position og er satt til å være 100% height og width. Alt grafisk innhold man
             vil vise MÅ ligge inni denne. Den passer på at du har kontroll over hvor ting er på skjermen.
@@ -55,7 +49,7 @@
             på skjermen når man scroller. For å bytte hvilken "page" man ser kan man sette opacity på individuelle page-n.    
         -->
         <div class="page" id="page-1">
-            <div class="gull-ivar" id="bbl-1">
+            <div id="bbl-1">
                 <div class="speech-bubble">
                     <div class="bubble-text">
                         De sier at denne byen var en gang politisk og forrettnings senter. Lurer på om det finnes skatt
@@ -63,9 +57,7 @@
                     </div>
                     <div class="arrow"></div>
                 </div>
-                <div class="img-container" id="gullivar-image">
-                    <img src="images/Gullivar_The_Explorer.png" alt="gull-ivar">
-                </div>
+                    <img src="images/Gullivar_The_Explorer.png" alt="gullivar" id="gullivar-thex-img">
             </div>
         </div>
         <div class="page" id="page-2" class="page-2">
@@ -75,22 +67,18 @@
                     menneskeskapt demning. </div>
                 <div class="arrow"></div>
             </div>
-            <div class="gull-ivar" id="bbl-1">
 
-                <div class="speech-bubble">
+            <div id="bbl-3">
+                <div class="speech-bubble" id="bbl-text-3">
                     <div class="bubble-text">
                         Wow!!!
                     </div>
                     <div class="arrow"></div>
                 </div>
-                <div class="img-container"></div>
-                    <img src="images/Gullivar_The_Explorer.png" alt="gull-ivar">
-
-                </div>
+                <div id="gull-thex-container">
+                     <img src="images/Gullivar_The_Explorer.png" alt="gullivar" id="gullivar-p2-img">
+                     </div>
             </div>
-
-
-
         </div>
 
         <!-- <div class="page" id="page-3">
