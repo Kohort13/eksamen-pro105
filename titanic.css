@@ -1,54 +1,59 @@
 /*HANNA*/
 
 /*
-GENERAL
+BACKGROUND
 */
 
-  body, html{
-    height: 100%;
-    background-image: url("/images/titanic.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+    body, html{
+      height: 100%;
+      background-image: url("images/titanic.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
 
+
+/* 
+DESTINATION
+*/
+    #destination{
+      font-size: 200px;
+      position: relative;
+      left: 30%;
+    }
   
+
 /* 
 GULLIVAR
 */
-  .titanic-gullivar{
-    width: 15%;
-  }
-
-  .container.gull-ivar {
-    border:solid red 3px;
-    animation: float 3s linear infinite;
-    position: fixed;
-    width: 15%;
-    left: 60%;
-    top: 30%;
-    */
-  }
-
-  @keyframes float {
-    0%, 100% {
-      top: 20%;
+    .titanic-gullivar{
+      width: 150px;
     }
-    50% {
-      top: 23%;
+
+    .container.gull-ivar {
+      animation-name: float;
+      animation-duration: 4s;
+      animation-timing-function: linear; 
+      animation-iteration-count: infinite;
+      position: fixed; 
+      width: 250px;
+      left: 980px;
+      bottom: 100px;
+      top: auto;
     }
-  }
 
+    @keyframes float {
+      0%, 100% {
+        bottom: 100px;
+      }
+      50% {
+        bottom: 150px;
+      }
+    }
 
-/* 
-PAGE 1
+/*
+NECKLACE
 */
-  #destination{
-    font-size: 200px;
-    position: relative;
-    left: 20%;
-  }
-
   #frame-1:hover #necklace{
     transform: scale(0.1);
     left: 700px;
@@ -57,41 +62,44 @@ PAGE 1
     animation-duration: 7s;
     animation-timing-function: linear;
     position: absolute;
-    }
+  }
 
     @keyframes necklace-sink {
-        0% { 
-          top: -400px; 
-        }
-        90% { 
-          top: 120px; 
-        }
-        100% {
-          top: 130px;
-        }
+      0% { 
+        top: -400px; 
+      }
+      90% { 
+        top: 120px; 
+      }
+      100% {
+        top: 130px;
+      }
     } 
- 
+  
 /* 
 JACK 
 */
-
-#jack {
-    width: 20px;
-    left: 200px;
-    top: 100%;
+  #frame-3:hover #jack{
+    width: 100px;
+    left: 100px;
+    top: 600px;
     animation-name: jack-frozen;
-    animation-duration: 6s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     position: absolute;
-    }
+    animation-timing-function: linear;
+  }
 
     @keyframes jack-frozen {
-        0%, 100% { 
-          top: 100%; 
-        }
-        50% { 
-          top: 90%; 
-        }
-        
+      0%, 100% { 
+          top: 600px; 
+      }
+      50% { 
+          top: 400px; 
+      }
     }
 
+#link{
+  text-decoration: none;
+  color: blue;
+}

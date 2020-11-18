@@ -12,11 +12,8 @@
 <body>
     <div id="root">
         <div class="frame" id="background"></div>
-        <!--
-            Frame er en boks som dekker hele skjermen, men de har ikke 100% høyde - altså kan man "scrolle" gjennom de. De er ikke synlige, 
-            men brukes til å trigge frame-n:hover. Hver frame har sin egen nav-buttons div. Disse har ikke fixed position, men er alltid på toppen av skjermen.
-            Når man hopper til neste page vil man effektivt scrolle ned til neste frame-id, og da vil de neste knappene vises.
-        -->
+       <!-- This part i devided into to pages which can be affected by class="frame".
+       Frme 1 is the first silde which has the option of scrolling down and a button to click on in order to switch to next slide. -->
         <div class="frame" id="frame-1">
             <div class="nav-buttons">
                 <a href="#frame-1"></a>
@@ -36,6 +33,7 @@
                 </div>
             </div>
         </div>
+        <!-- Frame 2 starts here. This slide has the button to navigate to previous slide or scrolling up.  -->
         <div class="frame" id="frame-2">
 
             <div class="nav-buttons">
@@ -43,7 +41,7 @@
                 <a href="#frame-3"></a>
             </div>
             <div class="container background"></div>
-
+        <!-- This part contains the picture and the bubble speech av The Lion. -->
             <div class="container lion">
                 <div class="speech-bubble" id="bbl-1">
                     <div class="bubble-text">Jeg har vært i 131 meters dybde under vann og omgitt av fisk og andre
@@ -54,40 +52,22 @@
                 </div>
                 <img src="images/lion.png">
             </div>
-            
+        <!-- This part contains the picture and the bubble speech av Gullivar The Explorer. -->
             <div class="container gullivar"  id="gte-2">
-                <div class="speech-bubble" id="bbl-3">
-                    <div class="bubble-text">
-                        Wow!!!
+                <!-- The div tag below is used to create more than one animation effect on the container. -->
+                <div class="hover-bounce-effect">
+                    <div class="speech-bubble" id="bbl-3">
+                        <div class="bubble-text">
+                            Wow!!!
+                        </div>
+                        <div class="arrow"></div>
                     </div>
-                    <div class="arrow"></div>
                 </div>
                 <div class="gullivar-thex-img">
                     <img src="images/Gullivar_The_Explorer.png" alt="gullivar">
                 </div>
             </div>
         </div>
-        <!-- <div class="frame" id="frame-3">
-            <div class="nav-buttons">
-                <a href="#frame-2"></a>
-                <a href="#frame-4"></a>
-            </div>
-        </div>
-        <div class="frame" id="frame-4">
-            <div class="nav-buttons">
-                <a href="#frame-3"></a>
-                <a href="#frame-4"></a>
-            </div>
-        </div> -->
-
-        <!--
-            Elementet under har fixed position og er satt til å være 100% height og width. Alt grafisk innhold man
-            vil vise MÅ ligge inni denne. Den passer på at du har kontroll over hvor ting er på skjermen.
-            Alle div'er som ligger inni vil arve posisjon. M.a.o vil de forbli på samme sted 
-            på skjermen når man scroller. For å bytte hvilken "page" man ser kan man sette opacity på individuelle page-n.    
-        -->
-
-
     </div>
 </body>
 
