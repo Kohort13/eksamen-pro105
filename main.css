@@ -1,34 +1,72 @@
 *{
-    padding: 0;
+    /* Removing padding & margin on all elements, prefer to set it explicitly */
     margin: 0;
-}
-.page{
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0%;
-}
-.page *{
-    position: relative;
+    padding: 0;
 }
 
-.frame{
-    z-index: 10;
-    width: 100%;
-    height: 1440px;
-    text-align: center;
-    background-color: #0000;
-}
+
 /****************************
-Speech Bubbles
+GLOBAL CONTAINERS
 ****************************/
+/* Frame is the master container for each slide. The elements inside it is placed with position: fixed, 
+but the frame div itself is positioned normally. Height set to 2160px, which is the height of most 4K screens. 
+This ensures nav-buttons for next frame won't be seen unless the user has a super hi-res screen
+ */
+.frame{
+    height: 2160px;
+    width: 100%;    
+}
+
+/* Container is used to place items on the screen within the frame. It has default height & width that can be overridden through ID's. 
+All elements inside a frame must be inside a container for the page to work, since the containers are used to show and hide the individual elements */
+.container{
+    position: fixed;
+    /* Using transform: scale(0) to hide elements in a way that doesn't trigger hover when they're hidden (opacity will still trigger hover) */
+    transform: scale(0);
+    height: fit-content;
+    width: fit-content;
+}
+/* Showing the elements of a frame when the frame is hovered */
+.frame:hover .container {
+    transform: scale(1);
+}
+
+/****************************
+NAVIGATION BUTTONS
+****************************/
+.frame > .nav-buttons{
+    /* Setting z-index to a very high number to make sure no elements accidentaly appear on top of it */
+    z-index: 100;    
+    position: relative;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    /* Center buttons horizontally */
+    margin: 0 auto;
+    background-color: #777;
+    border-radius: 4px;
+}
+.nav-buttons a{
+    font-size: 20px;
+}
+
+/* Styling text for navigation buttons */
+.nav-buttons a:first-child::before{
+    content: "Tilbake";
+}
+.nav-buttons a:nth-child(2)::before {
+    content: "Frem";
+}
+
+/****************************
+SPEECH BUBBLES
+****************************/
+/* Master container for a speech bubble */
 .speech-bubble{
     width: fit-content;
     position: absolute;
 }
+/* The text-element of a speech bubble */
 .bubble-text{
     z-index: 5;
     position: relative;
@@ -39,9 +77,10 @@ Speech Bubbles
     border-radius: 15px;
     background-color: #fff;
     word-wrap: normal;
-    /* Snakkeboblen kan få skygge, hvis det er lov i CSS */
+    /* Shadow for speech bubble. Not active in case illegal CSS property (see .arrow as well...) */
     /* box-shadow: 5px -7px 12px  rgba(0,0,0,0.6); */
 }
+/* The pointer element of a speech bubble */
 .arrow{
     position: relative;
     z-index: 4;
@@ -54,25 +93,3 @@ Speech Bubbles
     border-radius: 0 0 4px 0;
     /* box-shadow: 5px -7px 12px  rgba(0,0,0,0.6); */
 }
-
-/****************************
-Buttons
-****************************/
-.nav-buttons{
-    text-align: center;
-    height: 30px;
-    width: 150px;
-    margin: 0 auto;
-    background-color: #777;
-    border-radius: 4px;
-}
-.nav-buttons a{
-    font-size: 20px;
-}
-.nav-buttons a:first-child::before{
-    content: "Tilbake";
-}
-.nav-buttons a:nth-child(2)::before {
-    content: "Frem";
-}
-

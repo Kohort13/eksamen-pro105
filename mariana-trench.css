@@ -1,19 +1,69 @@
+/*************************
+    DEBUG/UTVIKLERMODUS + TIPS
+
+    HUSK Å SLETTE MEG FØR INNLEVERING!!!!
+*************************/
+
+
+/* VIS ALLE ELEMENTER I EN FRAME UTEN Å BRUKE HOVER - BRUK DETTE TIL Å LAGE LAYOUT PER FRAME: */
+#frame-id .container{
+    transform: scale(1);
+}
+/* GENERÉR RØD BORD RUNDT ALLE CONTAINERE: */
+.container{
+    border: 3px solid red;
+}
+
+/* HVIS DU VIL AT EN CONTAINER SKAL DEKKE HELE SKJERMEN: */
+#container-id{
+    width: 100%;
+    height: 100%;
+}
+
+/*  HVIS DU VIL FLYTTE PLASSERINGEN TIL "PILEN" TIL EN SNAKKEBOBLE TIL VENSTRE SIDE: */
+#container-id .speech-bubble .arrow{
+    left: -5px;
+    bottom: 70px;
+    transform: rotate(135deg);
+}
+
+/* HVIS DU VIL ANIMERE TING I EN FRAME NÅR DU HOVRER PÅ SELVE FRAMEN (MÅ IKKE VÆRE DIV, KAN
+VÆRE HVILKEN SOM HELST TAG DU VIL): */
+#frame-id:hover #container-id div{
+    transform: scale(1.2);
+}
+
+/* HVIS DU VIL STILSETTE MANGE CONTAINERE LIKT UTEN Å GI ALLE UNIK ID (PASS PÅ AT DET IKKE ER MELLOMROM MELLOM KLASSENE): */
+.container.class-x{
+    background-color: violet;
+}
+/* ^ I HTML MÅ DU SKRIVE class="container class-x" FOR AT DET SKAL VIRKE. DETTE GJØR AT MAN KOMBINERER KLASSER. class-x 
+KAN VÆRE HVA ENN DU VIL, SÅ LENGE DET IKKE ER CONTAINER */
+
+/*************************
+    ^ HUSK Å SLETTE MEG FØR INNLEVERING!!!!
+*************************/
+
 /*******************
 Custom content
 *******************/
-.page{
-    transition-property: all;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-}
 #background{
+    position: fixed;
+    z-index: -2;
+    top: 0%;
+    height: 100%;
+    width: 100%;
     opacity: 100%;
     background-color: #377a98;
+    transition-property: background-color;
+    transition-duration: 1s;
 }
 .surface{
+    position: fixed;
+    z-index: -1;
     width: 120%;
     height: 20%;
-    top: -10%;
+    top: -23%;
     left: -10%;
     background-color: skyblue;
     border-bottom-left-radius: 50%;
@@ -21,31 +71,52 @@ Custom content
     animation: wave 5s ease-in-out 0ms infinite;
     transition: top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.gull-ivar{
-    position: relative;
-    width: 30%;
+#frame-2:hover #whale-octo img{
+    transform: scale(1.2);
+}
+.container.gull-ivar{
     height: fit-content;
     top: 23%;
     left: 33%;
 }
+#gi-1{
+    bottom: 50px;
+    left: 33px;
+}
+#gi-2{
+    bottom: 20%;
+    left: 33%;
+}
+#gi-2 .speech-bubble .arrow{
+    left: -5px;
+    bottom: 70px;
+    transform: rotate(135deg);
+}
+#frame-1:hover .surface{
+    top: -10%;
+}
 .img-container{
     animation: bounce 2s ease-in-out 0s infinite;
 }
-.gull-ivar div img{
+.img-container img{
     transform: scaleX(-1);
     position: relative;
     max-width: 70%;
 }
-.sign{
-    position: absolute;
+#sign-twilight{
     top: 20%;
     right: 22%;
+}
+.sign{
     width: fit-content;
     padding: 15px 15px;
     border-radius: 15px;
     background-color: #d3c1a3;
     border: 4px solid #684406;
     transform: rotate(22deg);
+}
+#sign-twilight:hover{
+    animation: bounce 2s ease-in-out 0s infinite;
 }
 /*******************
 Speech bubbles
@@ -62,130 +133,49 @@ Setting & positioning frames
 /*******************
 Frame 1
 *******************/
-#page-1{
-    opacity: 100%;
-}
-#frame-1:hover ~ #page-1{
-    opacity: 100%;
-}
-#frame-1:hover ~ #page-1 #gi-1{
-    animation: slideFromLeft 1s ease-in-out 0s;
-}
 
 /*******************
 Frame 2
 *******************/
 #whale-octo{
-    position:absolute;
-    height: 30%;
-    width: auto;
     right: 20%;
     top: 30%;
+    
 }
-#page-2 #gi-2{
-    top: 53%;
-    left: 23%;
-}
-
-/*Transition out Gull-Ivar from frame-1*/
-#frame-2:hover ~ #page-1 #gi-1{
-    animation: slideFromBottom 1s ease-in-out 0s reverse;
+#whale-octo img{
+    height: 300px;
+    width: auto;
 }
 
-
-#frame-2:hover ~ #page-2{
-    transition-delay: 1s;
-    opacity: 100%;
-}
-#frame-2:hover ~ #page-2 #gi-2{
-    animation: slideFromBottom 2s ease-in-out 1s;
-}
-#frame-2:hover ~ #background{
+/* #frame-2:hover ~ #background{
     background-color: #377a98;
-}
+} */
 
 /*******************
 Frame 3
 *******************/
-/*Transition out Gull-Ivar from frame-2*/
-#frame-3:hover ~ #page-2 #gi-2{
-    animation: slideFromBottom 1s ease-in-out 0s reverse;
-}
-#frame-3:hover ~ #page-3{
-    opacity: 100%;
-}
 
-#frame-3:hover ~ #background{
+/* #frame-3:hover ~ #background{
     background-color: #377a98;
-}
+} */
 
 /*******************
 Frame 4
 *******************/
-#frame-4:hover ~ #page-4{
-    opacity: 100%;
-}
-#frame-4:hover ~ #background{
+
+/* #frame-4:hover ~ #background{
     background-color: #152069;
-}
+} */
 
 /*******************
 Frame 5
 *******************/
-#frame-5:hover ~ #page-5{
-    opacity: 100%;
-}
-#frame-5:hover ~ #background{
-    background-color: #152069;
-}
 
 /*******************
 Frame 6
 *******************/
-#frame-6:hover ~ #page-6{
-    opacity: 100%;
-}
-#frame-6:hover ~ #background{
-    background-color: #152069;
-}
 
-/*******************
-Hiding frame 1 and surface on all other frames
-*******************/
-#frame-2:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-2:hover ~ #page-1 .surface{
-    top: -20%;
-}
 
-#frame-3:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-3:hover ~ #page-1 .surface{
-    top: -20%;
-}
-
-#frame-4:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-4:hover ~ #page-1 .surface{
-    top: -20%;
-}
-
-#frame-5:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-5:hover ~ #page-1 .surface{
-    top: -20%;
-}
-
-#frame-6:hover ~ #page-1{
-    opacity: 0%;
-}
-#frame-6:hover ~ #page-1 .surface{
-    top: -20%;
-}
 
 /*******************
 Animations
