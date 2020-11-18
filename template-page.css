@@ -82,7 +82,21 @@ body{
 }
 
 
-
+.container#centered{
+    height: 20%;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; /* aligns on vertical for column */
+    align-items: center; /* aligns on horizontal for column */
+}
+.container#centered div{
+    background-color: skyblue;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+}
 #speech-bubble-3:hover .bubble-text::after{
     content: '\A\A Hah! Jeg reagerer også på hover ;)';
     /* OBS OBS OBS OBS
