@@ -27,9 +27,7 @@
     position: relative;
     max-width: 500%;   
 }
-.container{
-    border: 3px solid red;
-}
+
 /*************************
 Fish
 **************************/
@@ -77,35 +75,35 @@ Animations
 }
 @keyframes slideRight{
     0%{
-        transform: translate(-100%, 0%);
+        transform: translate(-500px, 0px);
     }
     100%{
-        transform: translate(0%, 0%);
+        transform: translate(0px, 0px);
     }
 
 }
 @keyframes slideLeft{
     0%{
-        transform: translate(150%, 0%);
+        transform: translate(1000px, 0px);
     }
     100%{
-        transform: translate(0%, 0%);
+        transform: translate(0px, 0px);
     }
 }
 @keyframes furtherRight{
     0%{
-        transform: translate(0%, 0%);
+        transform: translate(0px, 0px);
     }
     100%{
-        transform: translate(300%, 0%);
+        transform: translate(800px, 0px);
     }
 }
 @keyframes returnPosition{
     0%{
-        transform: translate(300%, 0%);
+        transform: translate(800px, 0px);
     }
     100%{
-        transform: translate(0%, 0%);
+        transform: translate(0px, 0x);
     }
 }
 @keyframes fadeInOut{
@@ -155,19 +153,19 @@ Animations
 }
 @keyframes flipflop{
     0%{
-        transform: translate(0%, 0%);
+        transform: translate(0px, 0px);
     }
     90%{
-        transform: translate(0%, 0%);
+        transform: translate(0px, 0px);
     }
     93%{
         transform: rotateY(180deg);
     }
     95%{
-        transform: translate(0%, 0%);
+        transform: translate(0px, 0px);
     }
     100%{
-        transform:translate(200%, 0%);
+        transform:translate(1000px, 0px);
     }
 }
 
@@ -188,7 +186,7 @@ Frame 1
 #gull-1b .img-container{
     opacity: 0%;
 }
-#frame-1:hover #bbl-02{
+#frame-1:hover #bbl-01{
     animation: 
     bounce 2s ease-in-out 500ms infinite,
     fadeIn 4s;
@@ -239,7 +237,7 @@ Frame 2
 #lakselars-1b .img-container{
     opacity: 0%;
 }
-#frame-2:hover #bbl-05{
+#frame-2:hover #bbl-03{
     animation: 
     bounce 2s ease-in-out 500ms infinite,
     fadeIn 5s;
@@ -248,7 +246,7 @@ Frame 2
 Frame 3
 *******************/
 #frame-3:hover .container.gull-ivar{
-    transform: translate(300%, 0%);
+    transform: translate(800px, 0px);
 }
 #frame-3:hover #lakselars-2{
     animation:
@@ -260,15 +258,18 @@ Frame 3
 /*******************
 Frame 4
 *******************/
-#frame-4:hover #bbl-04{
+#frame-4:hover .container.gull-ivar{
+    transform: translate(800px, 0px);
+}
+#frame-4:hover #bbl-05{
     animation:
-    fadeInOut 7s;
+    fadeInOut 5s;
     animation-fill-mode: forwards;
 }
 
 #frame-4:hover #lakselars-3{
     animation:
-    flipflop 9s;
+    flipflop 6s;
     animation-fill-mode: forwards;
 }
 /*******************
