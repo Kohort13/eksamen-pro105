@@ -57,23 +57,23 @@ NECKLACE
 */
   #frame-1:hover #necklace{
     transform: scale(0.2);
-    left: 70%;
-    top: 0%;
+    left: 65%;
+    top: 35%;
     animation-name: necklace-sink;
     animation-duration: 7s;
     animation-timing-function: linear;
-    position: absolute;
+    position: fixed;
   }
 
     @keyframes necklace-sink {
       0% { 
-        top: 0%; 
+        top: -40%; 
       }
       90% { 
-        top: 70%; 
+        top: 30%; 
       }
       100% {
-        top: 75%;
+        top: 35%;
       }
     } 
   
