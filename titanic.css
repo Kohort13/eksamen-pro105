@@ -18,8 +18,10 @@ DESTINATION
 */
     #destination{
       font-size: 200px;
-      position: relative;
-      left: 30%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
   
 
@@ -27,7 +29,7 @@ DESTINATION
 GULLIVAR
 */
     .titanic-gullivar{
-      width: 150px;
+      width: 200px;
     }
 
     .container.gull-ivar {
@@ -35,8 +37,8 @@ GULLIVAR
       animation-duration: 4s;
       animation-timing-function: linear; 
       animation-iteration-count: infinite;
-      /* width: 250px; */
-      left: 980px;
+      width: 250px;
+      left: 80%;
       bottom: 100px;
       top: auto;
     }
@@ -54,9 +56,9 @@ GULLIVAR
 NECKLACE
 */
   #frame-1:hover #necklace{
-    transform: scale(0.1);
-    left: 700px;
-    top: 130px;
+    transform: scale(0.2);
+    left: 70%;
+    top: 0%;
     animation-name: necklace-sink;
     animation-duration: 7s;
     animation-timing-function: linear;
@@ -65,13 +67,13 @@ NECKLACE
 
     @keyframes necklace-sink {
       0% { 
-        top: -400px; 
+        top: 0%; 
       }
       90% { 
-        top: 120px; 
+        top: 70%; 
       }
       100% {
-        top: 130px;
+        top: 75%;
       }
     } 
   
@@ -80,12 +82,11 @@ JACK
 */
 
 #jack{
-  top: auto;
-  bottom: -300px;
+  top: 100%;
   left: 880px;
 }
 #frame-3 #jack div img{
-  width: 100px;
+  width: 200px;
 }
 #frame-3:hover .container#jack > div{
     animation-name: jack-frozen;
@@ -100,7 +101,7 @@ JACK
           transform: translate(0px, 0px);
       }
       50% { 
-          transform: translate(0px, -250px);
+          transform: translate(0px, -130px);
       }
     }
 
