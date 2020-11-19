@@ -82,11 +82,11 @@ NECKLACE
     100% {
       transform: translate(0px, 0px);
     }
-  
+    }
 /* 
 JACK 
 */
-#jack{
+ #jack {
   top: 100%;
   left: 280px;
 }
