@@ -21,8 +21,12 @@ DESTINATION
       left: 0;
       right: 0;
       margin: auto;
+      font-family: 'Times New Roman', Times, serif;
     }
-  
+   
+    #titanic-font {
+      font-family: 'Times New Roman', Times, serif;
+    }
 
 /* 
 GULLIVAR
@@ -36,7 +40,6 @@ GULLIVAR
       animation-duration: 4s;
       animation-timing-function: linear; 
       animation-iteration-count: infinite;
-      width: 250px;
       left: 80%;
       bottom: 100px;
       top: auto;
@@ -70,16 +73,15 @@ NECKLACE
   }
 
     @keyframes necklace-sink {
-      0% { 
-        top: -40%; 
-      }
-      90% { 
-        top: 33%; 
-      }
-      100% {
-        top: 35%;
-      }
-    } 
+    0% {
+      transform: translate(0px, -800px);
+    }
+    90% {
+      transform: translate(0px, -15px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
   
 /* 
 JACK 
