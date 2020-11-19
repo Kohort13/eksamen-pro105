@@ -4,65 +4,86 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="map.css">
         <title>Hovedmeny</title>
     </head>
     <body>
-        <div id="background">
+        <h1 class="title-heading">Gull-Ivars Reiser!</h1>
+        <div class="map-container">
             <img src="images/map.jpg" id="map" alt="kart">
             
             <div class="pin-div-test under">
-                <a href="under.html" title="Besøk Under">
+                <a href="under.html#frame-1" title="Besøk Under">
                     <img src="images/pin.png" class="pin-img under">
                 </a>
-                <a href="under.html" title="Besøk Under" class="link-text under">Under</a>
+                <a href="under.html#frame-1" title="Besøk Under" class="link-text under">Under</a>
+            </div>
+
+            <div class="pin-div-test mariana-trench">
+                <a href="mariana-trench.html#frame-1" title="Besøk Mariana Trench">
+                    <img src="images/pin.png" class="pin-img mariana-trench">
+                </a>
+                <a href="mariana-trench.html#frame-1" title="Besøk Mariana Trench" class="link-text mariana-trench">Mariana Trench</a>
+            </div>
+            
+            <div class="pin-div-test lion-city">
+                <a href="lion-city.html#frame-1" title="Besøk Lion City">
+                    <img src="images/pin.png" class="pin-img lion-city">
+                </a>
+                <a href="lion-city.html#frame-1" title="Besøk Lion City" class="link-text lion-city">Lion City</a>
+            </div>
+
+            <div class="pin-div-test gbr">
+                <a href="great-barrier-reef.html#frame-1" title="Besøk Great Barrier Reef">
+                    <img src="images/pin.png" class="pin-img gbr">
+                </a>
+                <a href="great-barrier-reef.html#frame-1" title="Besøk Great Barrier Reef" class="link-text gbr">Great Barrier Reef</a>
+            </div>
+
+            <div class="pin-div-test titanic">
+                <a href="titanic.html#frame-1" title="Besøk Titanic">
+                    <img src="images/pin.png" class="pin-img titanic">
+                </a>
+                <a href="titanic.html#frame-1" title="Besøk Titanic" class="link-text titanic">Titanic</a>
             </div>
         </div>
-        
-        
-        <!-- <div class="pin" id="great-barrier-reef">
-            <a class="link" href="great-barrier-reef.html" title="Besøk Great Barrier Reef">
-                Great Barrier Reef
-            </a>
-        </div>
-        
-        <div class="pin" id="lion-city">
-            <a class="link" href="lion-city.html" title="Besøk Lion City">
-                Lion City
-                <img src="images/pin.png" class="pin-img">
-            </a>
-        </div>
-        
-        <div class="pin" id="mariana-trench">
-            <a class="link" href="mariana-trench.html" title="Besøk Mariana Trench">
-                Mariana Trench
-                <img src="images/pin.png" class="pin-img">
-            </a>
-        </div>
-        
-        <div class="pin" id="titanic">
-            <a class="link" href="titanic.html" title="Besøk Titanic">
-                Titanic
-                <img src="images/pin.png" class="pin-img">
-            </a>
-        </div>
-        
-        <div class="pin" id="under">
-            <a class="link" href="under.html" title="Besøk Under">
-                Under
-                <img src="images/pin.png" class="pin-img">
-            </a>
-        </div> -->
-        
-        
-        
-        
-        <!-- <div class="pin">
-        </div> -->
 
-    <div>
-        <!-- <img src="images/Guideivar.png"  id="gullivar"> -->
+    <div class="container" id="gullivar">
+        <div class="speech-bubble-anim">
+            <div class="speech-bubble">
+                <div class="bubble-text">
+                    Hei! Jeg heter Gull-Ivar, og er en gullfisk som er - ahem - allergisk mot saltvann...
+                    Jeg har alltid villet reise rundt i verden for å se hva som finnes i de forskjellige havene,
+                    og nå har jeg fått meg en fjong gullfiskbolle som jeg kan kjøre rundt i. Den beskytter meg fra det
+                    forferdelige saltvannet. Har du lyst til å bli med og utforske?
+                    <br><br>
+                    (Psst! De som har laget denne nettsiden vil gjerne be om at du bruker knappene øverst på skjermen
+                    for å navigere på undersidene i stedet for å scrolle - da får du den beste opplevelsen!)
+                </div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="img-container">
+            <div class="anim-in">
+                <div class="anim-out">
+                    <div class="anim-rotate">
+                        <img src="images/Gullivar.png" alt="gull-ivar">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- <div class="bubble-text">
+        Hei! Jeg heter Gull-Ivar, og er en gullfisk som er - ahem - allergisk mot saltvann...
+        Jeg har alltid villet reise rundt i verden for å se hva som finnes i de forskjellige havene,
+        og nå har jeg fått meg en fjong gullfiskbolle som jeg kan kjøre rundt i. Den beskytter meg fra det
+        forferdelige saltvannet. Har du lyst til å bli med og utforske?
+        <br><br>
+        (Psst! De som har laget denne nettsiden vil gjerne be om at du bruker knappene øverst på skjermen
+        for å navigere på undersidene i stedet for å scrolle - da får du den beste opplevelsen!)
+    </div> -->
 </div>
 </body>
 </html>
