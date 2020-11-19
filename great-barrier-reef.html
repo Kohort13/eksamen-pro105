@@ -9,18 +9,16 @@
 </head>
 <body>
     <div id="root">
-        <!--
-            Frame er en boks som dekker hele skjermen, men de har ikke 100% høyde - altså kan man "scrolle" gjennom de. De er ikke synlige, 
-            men brukes til å trigge frame-n:hover. Hver frame har sin egen nav-buttons div. Disse har ikke fixed position, men er alltid på toppen av skjermen.
-            Når man hopper til neste page vil man effektivt scrolle ned til neste frame-id, og da vil de neste knappene vises.
-        -->
-
+        <!--*********************************************************
+                                 FRAME 1
+        **********************************************************-->
         <!--Welcome to the Great Barrier Reef-->
         <div class="frame" id="frame-1">
             <div class="nav-buttons">
                 <a href="#frame-1"></a>
                 <a href="#frame-2"></a>
             </div>
+            <!--Have a unique frame1 class incase i get any funny ideas i would like to follow.-->
             <div class="container frame1" id="welcome-gbr">
                 <h1>Great Barrier Reef</h1>
                 <img id="gull-ivar-flipped" src="images/Gullivar.png">
@@ -46,13 +44,16 @@
                 </div>
             </div>
         </div>
-        
+        <!--*********************************************************
+                                 FRAME 2
+        **********************************************************-->
         <!--Fun Facts w/ Gull-Ivar-->
         <div class="frame" id="frame-2">
             <div class="nav-buttons">
                 <a href="#frame-1"></a>
                 <a href="#frame-3"></a>
             </div>
+            <!--Have a unique frame2 class incase i get any funny ideas i would like to follow.-->
             <div class="container frame2" id="fun-facts-gull-ivar">
                 <br>
                 <h2>Fakta med Gull-Ivar!</h2>
@@ -65,13 +66,13 @@
                 <br>
                 <img src="images/Guideivar.png">
                 <br>
-                <p class="dark-background1">
+                <p class="dark-background">
                     Korallene vokser over gamle døde koraller. De eldste korallene kan være så gamle som 20 millioner år!
                     <br>
                     Noe  som er enda eldre enn koralene er enkelte av fiskeartene der som slekter på fiskearter som går 500 million år tilbake i tid!
                 </p>
                 <br>
-                <p class="dark-background2">
+                <p class="dark-background">
                     Du kan faktisk see Great Barrier Reef fra verdensrommet.
                     <br>
                     Det hadde Gull-Ivar syntes vært veldig morsomt, men han har kanskje opplevd nok spenning for en reise?
@@ -80,12 +81,16 @@
             </div>
         </div>
 
+        <!--*********************************************************
+                                 FRAME 3
+        **********************************************************-->
         <!--A deeper dive into a couple of subject close to  Gull-Ivar's heart-->
         <div class="frame" id="frame-3">
             <div class="nav-buttons">
                 <a href="#frame-2"></a>
             </div>
-            <div class="container frame-3" id="deeper-dive-gull-ivar">
+            <!--Have a unique frame3 class incase i get any funny ideas i would like to follow.-->
+            <div class="container frame3" id="deeper-dive-gull-ivar">
                 <br><br><br>
                 <h2>Et dypere dykk med Gull-Ivar</h2>
                 <br>
@@ -102,8 +107,15 @@
                                 <img src="images/cartoon-coral.png" alt="cartoon coral">                          
                             </div>
                             <div class="card-back">
-                                <h4>Koraler</h4>
-                                <p>Placeholder</p>
+                                <h4>Koraller</h4>
+                                <br>
+                                <p class="backside-card-p">
+                                    Great Barrier Reef er verdensstørste korallrev.
+                                    <br>
+                                    Det er over 3000 mindre korallrev i GBR og 300 koralløyer.
+                                    <br>
+                                    Dette gjør det til et av verdens desidert mest avanserte økosystemer.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -111,12 +123,23 @@
                     <div class="flip-card" id="the-future-of-gbr">
                         <div class="flip-card-inner">
                             <div class="card-front">
-                                
                                 <h3>Fremtiden?</h3>
+                                <img src="images/cartoon-bag.png" alt="cartoon bag">  
                             </div>
                             <div class="card-back">
                                 <h4>Dør revet?</h4>
-                                <p>Placeholder</p>
+                                <br>
+                                <p class="backside-card-p">
+                                    Det er dessverre slik av korallrevet er døende.
+                                    <br>
+                                    Studier viser at det er halvparten så få levende koraller i revet nå enn det var i 1995.
+                                    <br>
+                                    Vannet blir varmere som gir korallene dårligere levevilkår.
+                                    <br>
+                                    I tillegg er det mye forurensning i vannet som fører til at det blir mye flere sjøstjerner. Disse sjøstjerne spiser korallene. 
+                                    <br>
+                                    Nok et menneskeskapt problem er forsøpling som ikke er bra for noe liv i revet. 
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -124,11 +147,21 @@
                     <div class="flip-card" id="others">
                         <div class="flip-card-inner">
                             <div class="card-front">
-                                <h3>Diverse andre</h3>
+                                <h3>Diverse</h3>
+                                <img src="images/cartoon-questionmark.png" alt="cartoon confused">  
                             </div>
                             <div class="card-back">
                                 <h4>Diverse</h4>
-                                <p>Placeholder</p>
+                                <br>
+                                <p class="backside-card-p">
+                                    Great Barrier Reef er den største "levende" tingen vi har på jorden.
+                                    <br>
+                                    Hele korallrevet er 2300 kilometer langt. 
+                                    <br>
+                                    Korallrevet tiltrekker over 2 000 000 turister hvert år(sannsynligvis mindre i år mtp. Covid-19).
+                                    <br>
+                                    Du trenger 70 000 000 fotballbaner for å få samme arealet som korallrevet. 
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -136,12 +169,6 @@
             </div>
         </div>
         
-        <!--
-            Elementet under har fixed position og er satt til å være 100% height og width. Alt grafisk innhold man
-            vil vise MÅ ligge inni denne. Den passer på at du har kontroll over hvor ting er på skjermen.
-            Alle div'er som ligger inni vil arve posisjon. M.a.o vil de forbli på samme sted 
-            på skjermen når man scroller. For å bytte hvilken "page" man ser kan man sette opacity på individuelle page-n.    
-        -->
 
         <!--*********************************************************
                                  FRAME 1

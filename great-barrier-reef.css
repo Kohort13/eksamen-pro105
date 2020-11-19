@@ -7,12 +7,14 @@ body {
     color: white;
 }
 .container {
+
+    /*
+    Used to check that the elements are inside the box. Makes it easier to work on placement
     border: solid 3px red;
+    */
 }
-.container#welcome-gbr, .container#fun-facts-gull-ivar  {
-    /*border: solid red 3px;*/
+.container#welcome-gbr, .container#fun-facts-gull-ivar, .container#deeper-dive-gull-ivar  {
     text-align: center;
-    /*height: 20%;*/
     width: 100%;
     top: 5%;
     display: flex;
@@ -40,7 +42,7 @@ h2 {
     font-size: 35px;
 }
 
-h3 {
+h3, h4 {
     font-size: 30px;
 }
 
@@ -52,13 +54,12 @@ p, #dark-background{
     background-color: rgba(9, 52, 100, 0.8);
 }
 
-.dark-background1, .dark-background2 {
-    display: inline;
-    background-color: rgba(9, 52, 100, 0.8);
-    opacity: 1;
-}
 #gull-ivar-flipped {
+    position: relative;
     transform: scaleX(-1);
+    animation-name: gull-ivar-flipped-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 #cartoon-shark {
@@ -66,6 +67,11 @@ p, #dark-background{
     animation-name: cartoon-shark-back-and-forth;
     animation-duration: 4s;
     animation-iteration-count: infinite; 
+}
+@keyframes gull-ivar-flipped-animation {
+    0%   {top: 10px; bottom: auto;}
+    50%  {top: 30px; bottom: auto;}
+    100% {top: 10px; bottom: auto;}
 }
 
 @keyframes cartoon-shark-back-and-forth {
@@ -78,7 +84,7 @@ p, #dark-background{
 #space-ivar {
     transform: scale(0.5);
     position: fixed;
-    top: 70%;
+    top: 75%;
     bottom: auto;
     width: auto;
 }
@@ -95,6 +101,9 @@ p, #dark-background{
 
 .container#flip-container{
     width: 100%;
+    top: 20%;
+    bottom: auto;
+    position: relative;
 }
 .flip-card {
     background-color: transparent;  
@@ -157,9 +166,10 @@ p, #dark-background{
     border-radius: 100px;
 }
 
+/* This should keep the image in the middle of the card whatever you do to the size */
 .card-front img{
-    width: 100%;
-    height: 100%;
-    /*object-fit: cover; */
-    border-radius: 100px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
 }
