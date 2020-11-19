@@ -79,11 +79,13 @@ Fish
 Speech-bubble
 **************************/
 .speech-bubble{
-    position: fixed;
+    position: relative;
     animation: bounce 2s ease-in-out 500ms infinite;
 }
-
-#bbl-01{
+/* #bbl-02{
+    transform: translate(0px, -300px);
+} */
+/* #bbl-01{
     bottom: 90%;
     top: auto;
     font-size: 30px;
@@ -107,7 +109,7 @@ Speech-bubble
     bottom: 90%;
     top: auto;
     font-size: 20px;
-}
+} */
 
 /*************************
 Animations
@@ -226,19 +228,30 @@ Animations
     }
 }
 
-#frame-1:hover #gull-1{
+/* Duplicated animations to facilitate multiple speech-bubbles. Image is set to 0% opacity on duplicate */
+#frame-1:hover #gull-1a{
     bottom:10%;
     left: 5%;
     animation: 
     bounce 2s ease-in-out 500ms infinite,
     slideRight 1s ease-in-out;
 }
+#frame-1:hover #gull-1b{
+    bottom:10%;
+    left: 5%;
+    animation: 
+    bounce 2s ease-in-out 500ms infinite,
+    fadeIn 4s ease-in-out;
+}
+#gull-1b .img-container{
+    opacity: 0%;
+}
 #frame-1:hover #bbl-02{
     animation: 
     bounce 2s ease-in-out 500ms infinite,
     fadeIn 4s;
 }
-#frame-2:hover #gull-2{
+#frame-2:hover #gull-2a{
     bottom:10%;
     left: 5%;
     animation:
@@ -246,17 +259,48 @@ Animations
     furtherRight 5s ease-in-out;
     animation-fill-mode: forwards;
 }
+/* Setting opacity of bubble that is in "background", since the next doesn't fully cover it */
+#gull-2a .speech-bubble{
+    opacity: 100%;
+    transition-property: opacity;
+    transition-delay: 2.7s;
+    transition-duration: 0.2s;
+}
+#frame-2:hover #gull-2a .speech-bubble{
+    opacity: 0%;
+}
+#frame-2:hover #gull-2b{
+    bottom:10%;
+    left: 5%;
+    animation:
+    bounce 2s ease-in-out 500ms infinite,
+    furtherRight 5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+#gull-2b .img-container{
+    opacity: 0%;
+}
 #frame-2:hover #bbl-02{
     animation: 
     bounce 2s ease-in-out 500ms infinite,
     fadeIn 3s;
 }
-#frame-2:hover #lakselars{
+#frame-2:hover #lakselars-1a{
     right: 5%;
     bottom: 10%;
     animation:
     shake 1s infinite,
     slideLeft 4s ease-in-out;
+}
+#frame-2:hover #lakselars-1b{
+    right: 5%;
+    bottom: 10%;
+    animation:
+    shake 1s infinite,
+    slideLeft 4s ease-in-out;
+}
+#lakselars-1b .img-container{
+    opacity: 0%;
 }
 #frame-2:hover #bbl-05{
     animation: 
@@ -269,7 +313,7 @@ Animations
     left:auto;
     top: auto;
 }
-#frame-3:hover #lakselars{
+#frame-3:hover #lakselars-2{
     right: 5%;
     bottom: 10%;
     animation:
@@ -278,7 +322,7 @@ Animations
 #frame-3:hover #bbl-04{
     animation: fadeIn 2s
 }
-#frame-4:hover #gull-3{
+#frame-4:hover #gull-4{
     bottom:10%;
     right:32%;
     left:auto;
@@ -289,14 +333,14 @@ Animations
     fadeInOut 7s;
     animation-fill-mode: forwards;
 }
-#frame-4:hover #lakselars{
+#frame-4:hover #lakselars-3{
     right: 5%;
     bottom: 10%;
     animation:
     flipflop 9s;
     animation-fill-mode: forwards;
 }
-#frame-5:hover #gull-3{
+#frame-5:hover #gull-5{
     bottom:10%;
     right:32%;
     left:auto;
