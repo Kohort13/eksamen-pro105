@@ -1,4 +1,4 @@
-/*Celect background image for the whole page*/
+/*Select background image for the whole page*/
 
 #background {
     position: fixed;
@@ -34,7 +34,7 @@
 
 
 
-.gullivar-thex-img {
+.bounce-animator {
     animation: bounce 2s ease-in-out 500ms infinite;
 }
 
@@ -55,25 +55,15 @@
     animation: speechBubble 4s ease-in-out 0s;
     animation-fill-mode: forwards;
 }
-#bbl-1 {
-    left: 30%;
-    font-size: 35px;
-
-}
-#bbl-2{
-    font-size: 35px;
-}
-#bbl-3 {
-    left: 30%;
-    font-size: 50px;
-
-}
 
 .speech-bubble #bbl-2 {
     top: 0%;
     left: 55%;
     width: 400px;
     height: 400px;
+}
+#bbl-3{
+    left: 10%;
 }
 
 .container.gullivar {
