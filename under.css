@@ -113,10 +113,10 @@ Animations
     0%{
         opacity: 0%;
     }
-    5%{
+    10%{
         opacity: 50%
     }
-    10%{
+    15%{
         opacity: 100%;
     }
     90%{
@@ -175,7 +175,7 @@ Image is set to 0% opacity on duplicate */
 #frame-1:hover #gull-1b{
     animation: 
     bounce 2s ease-in-out 500ms infinite,
-    fadeIn 4s ease-in-out;
+    fadeIn 2s ease-in-out;
 }
 #gull-1b .img-container{
     opacity: 0%;
@@ -183,7 +183,7 @@ Image is set to 0% opacity on duplicate */
 #frame-1:hover #bbl-01{
     animation: 
     bounce 2s ease-in-out 500ms infinite,
-    fadeIn 4s;
+    fadeIn 2s;
 }
 /*******************
 Frame 2
@@ -247,7 +247,7 @@ Frame 3
     shake 1s infinite;
 }
 #frame-3:hover #bbl-04{
-    animation: fadeIn 2s
+    animation: fadeIn 1s
 }
 /*******************
 Frame 4
