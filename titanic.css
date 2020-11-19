@@ -35,8 +35,7 @@ GULLIVAR
       animation-duration: 4s;
       animation-timing-function: linear; 
       animation-iteration-count: infinite;
-      position: fixed; 
-      width: 250px;
+      /* width: 250px; */
       left: 980px;
       bottom: 100px;
       top: auto;
@@ -79,23 +78,29 @@ NECKLACE
 /* 
 JACK 
 */
-  #frame-3:hover #jack{
-    width: 100px;
-    left: 100px;
-    top: 600px;
+
+#jack{
+  top: auto;
+  bottom: -300px;
+  left: 880px;
+}
+#frame-3 #jack div img{
+  width: 100px;
+}
+#frame-3:hover .container#jack > div{
     animation-name: jack-frozen;
     animation-duration: 7s;
     animation-iteration-count: infinite;
-    position: absolute;
     animation-timing-function: linear;
+
   }
 
     @keyframes jack-frozen {
       0%, 100% { 
-          top: 600px; 
+          transform: translate(0px, 0px);
       }
       50% { 
-          top: 400px; 
+          transform: translate(0px, -250px);
       }
     }
 
