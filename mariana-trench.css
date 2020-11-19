@@ -1,48 +1,9 @@
-/*************************
-    DEBUG/UTVIKLERMODUS + TIPS
 
-    HUSK Å SLETTE MEG FØR INNLEVERING!!!!
-*************************/
-
-
-/* VIS ALLE ELEMENTER I EN FRAME UTEN Å BRUKE HOVER - BRUK DETTE TIL Å LAGE LAYOUT PER FRAME: */
-#frame-id .container{
-    transform: scale(1);
-}
 /* GENERÉR RØD BORD RUNDT ALLE CONTAINERE: */
-.container{
+/* .container{
     border: 3px solid red;
-}
+} */
 
-/* HVIS DU VIL AT EN CONTAINER SKAL DEKKE HELE SKJERMEN: */
-#container-id{
-    width: 100%;
-    height: 100%;
-}
-
-/*  HVIS DU VIL FLYTTE PLASSERINGEN TIL "PILEN" TIL EN SNAKKEBOBLE TIL VENSTRE SIDE: */
-#container-id .speech-bubble .arrow{
-    left: -5px;
-    bottom: 70px;
-    transform: rotate(135deg);
-}
-
-/* HVIS DU VIL ANIMERE TING I EN FRAME NÅR DU HOVRER PÅ SELVE FRAMEN (MÅ IKKE VÆRE DIV, KAN
-VÆRE HVILKEN SOM HELST TAG DU VIL): */
-#frame-id:hover #container-id div{
-    transform: scale(1.2);
-}
-
-/* HVIS DU VIL STILSETTE MANGE CONTAINERE LIKT UTEN Å GI ALLE UNIK ID (PASS PÅ AT DET IKKE ER MELLOMROM MELLOM KLASSENE): */
-.container.class-x{
-    background-color: violet;
-}
-/* ^ I HTML MÅ DU SKRIVE class="container class-x" FOR AT DET SKAL VIRKE. DETTE GJØR AT MAN KOMBINERER KLASSER. class-x 
-KAN VÆRE HVA ENN DU VIL, SÅ LENGE DET IKKE ER CONTAINER */
-
-/*************************
-    ^ HUSK Å SLETTE MEG FØR INNLEVERING!!!!
-*************************/
 
 /*******************
 Custom content
@@ -71,42 +32,36 @@ Custom content
     animation: wave 5s ease-in-out 0ms infinite;
     transition: top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-#frame-2:hover #whale-octo img{
-    transform: scale(1.2);
-}
+
 .container.gull-ivar{
+    border: 3px solid red;
     height: fit-content;
     top: 23%;
     left: 33%;
 }
-#gi-1{
-    bottom: 50px;
-    left: 33px;
+/* Default Gull-Ivar animations */
+.frame:hover .container.gull-ivar .anim-in{
+    animation: slideFromBottom 1.8s ease-in-out 0ms;
+    animation-fill-mode: forwards;
 }
-#gi-2{
-    bottom: 20%;
-    left: 33%;
+.frame:hover .container.gull-ivar .anim-out{
+    animation: slideFromBottom 1.8s ease-in-out 7.8s 1 reverse;
+    animation-fill-mode: both;
 }
-#gi-2 .speech-bubble .arrow{
-    left: -5px;
-    bottom: 70px;
-    transform: rotate(135deg);
-}
-#frame-1:hover .surface{
-    top: -10%;
+.frame:hover .container.gull-ivar .anim-rotate{
+    animation: rotate90CW 0.7s ease-in-out 7.8s 1;
+    animation-fill-mode: both;
 }
 .img-container{
     animation: bounce 2s ease-in-out 0s infinite;
 }
+
 .img-container img{
-    transform: scaleX(-1);
+    transform: scaleX(-1) rotate(0deg);
     position: relative;
     max-width: 70%;
 }
-#sign-twilight{
-    top: 20%;
-    right: 22%;
-}
+
 .sign{
     width: fit-content;
     padding: 15px 15px;
@@ -115,7 +70,7 @@ Custom content
     border: 4px solid #684406;
     transform: rotate(22deg);
 }
-#sign-twilight:hover{
+#sign-twilight > div{
     animation: bounce 2s ease-in-out 0s infinite;
 }
 /*******************
@@ -125,26 +80,61 @@ Speech bubbles
     position: relative;
     animation: bounce 2s ease-in-out 500ms infinite;
 }
+.frame:hover .speech-bubble-anim{
+    animation: speechBubble 6s ease-in-out 1.8s;
+    animation-fill-mode: both;
+}
 
 /*******************
 Setting & positioning frames
 *******************/
 
+/* Show/hide selected frame always */
+#frame-2 > .container{
+    transform: scale(1);
+}
+
 /*******************
 Frame 1
 *******************/
 
+#gi-1{
+    bottom: 50px;
+    left: 33px;
+}
+#frame-1:hover .surface{
+    top: -10%;
+}
+
 /*******************
 Frame 2
 *******************/
-#whale-octo{
-    right: 20%;
-    top: 30%;
-    
+/* Positioning */
+.container#whale-octo{
+    border: 3px solid red;
+    height: 30%;
+    width: 100%;
+    top: 30%;    
+    left: 0;
 }
 #whale-octo img{
-    height: 300px;
+    position: relative;
+    animation: whaleTranslate 4s ease-in-out 0s infinite;
+    height: 100%;
+    left: 50%;
     width: auto;
+    /* animation: whale 4s ease-in-out 0s infinite; */
+}
+.container#sign-twilight{
+    top: 10%;
+    right: 22%;
+    left: auto;
+}
+
+#gi-2{
+    top: auto;
+    bottom: 10%;
+    left: 10%;
 }
 
 /* #frame-2:hover ~ #background{
@@ -180,6 +170,7 @@ Frame 6
 /*******************
 Animations
 *******************/
+/* Motion loops */
 @keyframes bounce{
     0%{transform: translate(0px, 0px);}
     50%{transform: translate(0px, -15px);}
@@ -202,17 +193,39 @@ Animations
         border-bottom-right-radius: 0%;
     }
 }
-@keyframes slideFromBottom{
+@keyframes whaleTranslate{
+    0% { transform: translate(0%, 0px) rotate(0deg); }
+    20% { transform: translate(400%, 0px) rotate(45deg); }
+    40% { transform: translate(-400%, 0px) rotate(-45deg); }
+    60% { transform: translate(200%, 50px) rotate(20deg); }
+    70% { transform: translate(-100%, -50px) rotate(0deg); }
+    80% { transform: translate(100%, -45px) rotate(-20deg); }
+    90% { transform: translate(0%, 0px) rotate(10deg); }
+    100% { transform: translate(0%, 0px) rotate(0deg); }
+}
+
+/* General movement animations */
+@keyframes speechBubble{
     0%{
-        transform: translate(0px, 1500px);
+        opacity: 0%;
     }
-    75%{
-        transform: translate(0px, -30px);
+    10%{
+        opacity: 100%;
+    }
+    90%{
+        opacity: 100%;
     }
     100%{
-        transform: translate(0px, 0px);
+        opacity: 0%;
     }
 }
+@keyframes rotate90CW{
+    0% { transform: rotate(0deg); }
+    /* 25% { transform: rotate(10deg); }
+    75% { transform: rotate(80deg); } */
+    100% { transform: rotate(90deg); }
+}
+
 @keyframes slideFromTop{
     0%{
         transform: translate(0px, -1500px);
@@ -224,23 +237,34 @@ Animations
         transform: translate(0px, 0px);
     }
 }
-@keyframes slideFromLeft{
-    0%{
-        transform: translate(-5000px, 0px);
-    }
-    75%{
-        transform: translate(30px, 0px);
-    }
-    100%{
-        transform: translate(0px, 0px);
-    }
-}
 @keyframes slideFromRight{
     0%{
         transform: translate(5000px, 0px);
     }
     0%{
         transform: translate(-30px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes slideFromBottom{
+    0%{
+        transform: translate(0px, 1500px);
+    }
+    75%{
+        transform: translate(0px, -30px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes slideFromLeft{
+    0%{
+        transform: translate(-5000px, 0px);
+    }
+    75%{
+        transform: translate(30px, 0px);
     }
     100%{
         transform: translate(0px, 0px);
