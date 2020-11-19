@@ -3,7 +3,6 @@
 /*
 BACKGROUND
 */
-
     body, html{
       height: 100%;
       background-image: url("images/titanic.jpg");
@@ -70,7 +69,7 @@ NECKLACE
         top: -40%; 
       }
       90% { 
-        top: 30%; 
+        top: 33%; 
       }
       100% {
         top: 35%;
@@ -80,10 +79,9 @@ NECKLACE
 /* 
 JACK 
 */
-
 #jack{
   top: 100%;
-  left: 880px;
+  left: 280px;
 }
 #frame-3 #jack div img{
   width: 200px;
@@ -105,6 +103,9 @@ JACK
       }
     }
 
+/*
+LINK
+*/
 #link{
   text-decoration: none;
   color: blue;
