@@ -1,6 +1,6 @@
 
 /*******************
-Custom content
+Default placements and animations
 *******************/
 #background{
     position: fixed;
@@ -43,7 +43,7 @@ Custom content
     top: 23%;
     left: 33%;
 }
-/* Default Gull-Ivar animations */
+
 .frame:hover .container.gull-ivar .anim-in{
     animation: slideFromBottom 1.8s ease-in-out 0ms;
     animation-fill-mode: forwards;
@@ -61,6 +61,7 @@ Custom content
 }
 
 .img-container img{
+    /* Flipping image of Gull-Ivar horisontally */
     transform: scaleX(-1) rotate(0deg);
     position: relative;
     max-width: 150px;
@@ -103,11 +104,6 @@ Speech bubbles
 Setting & positioning frames
 *******************/
 
-/* Show/hide selected frame always */
-/* #frame-2 > .container{
-    transform: scale(1);
-} */
-
 /*******************
 Frame 1
 *******************/
@@ -137,7 +133,6 @@ Frame 2
     height: 100%;
     left: 50%;
     width: auto;
-    /* animation: whale 4s ease-in-out 0s infinite; */
 }
 
 #gi-2{
@@ -145,7 +140,7 @@ Frame 2
     bottom: 10%;
     left: 10%;
 }
-
+/* Changing colour of background on hover, simulating going deeper */
 #frame-2:hover ~ #background{
     background-color: #21495c;
 }
@@ -170,14 +165,29 @@ Frame 3
     bottom: 10%;
     left: 10%;
 }
-
+/* Making animations longer for this frame, to accomodate for readability */
+#frame-3:hover #gi-3a .anim-in, #frame-3:hover #gi-3b .anim-in{
+    animation: slideFromBottom 1.8s ease-in-out 0ms;
+    animation-fill-mode: forwards;
+}
+#frame-3:hover #gi-3a .anim-out, #frame-3:hover #gi-3b .anim-out{
+    animation: slideFromBottom 1.8s ease-in-out 12s 1 reverse;
+    animation-fill-mode: both;
+}
+#frame-3:hover #gi-3a .anim-rotate, #frame-3:hover #gi-3b .anim-rotate{
+    animation: rotate90CW 0.7s ease-in-out 12s 1;
+    animation-fill-mode: both;
+}
+#frame-3:hover .speech-bubble-anim{
+    animation: speechBubble 10s ease-in-out 1.8s;
+    animation-fill-mode: both;
+}
 /* Hiding 1st speech bubble after 4.8s */
 #frame-3:hover #gi-3a{
     opacity: 0%;
     transition-property: opacity;
     transition-delay: 4.8s;
     transition-duration: 0s;
-    
 }
 /* Showing 2nd speech bubble after 4.8s */
 #gi-3b{
@@ -188,20 +198,11 @@ Frame 3
     transition-property: opacity;
     transition-delay: 4.8s;
     transition-duration: 0s;
-
 }
 
 #frame-3:hover ~ #background{
     background-color: #122630;
 }
-
-/*******************
-Frame 4 (optional)
-*******************/
-
-/* #frame-4:hover ~ #background{
-    background-color: #152069;
-} */
 
 /*******************
 Frame 5
@@ -215,20 +216,23 @@ Frame 5
     animation-fill-mode: both;
 }
 
-
 #gi-5a, #gi-5b{
     top: auto;
     bottom: 10%;
     left: 10%;
+}
+/* Making animations longer for this frame, to accomodate for readability */
+#frame-5:hover #gi-5a .anim-in, #frame-5:hover #gi-5b .anim-in{
+    animation: slideFromBottom 1.8s ease-in-out 0ms;
+    animation-fill-mode: forwards;
 }
 
 /* Hiding 1st speech bubble after 4.8s */
 #frame-5:hover #gi-5a{
     opacity: 0%;
     transition-property: opacity;
-    transition-delay: 4.8s;
+    transition-delay: 6s;
     transition-duration: 0s;
-    
 }
 
 /* Showing 2nd speech bubble after 4.8s */
@@ -238,11 +242,11 @@ Frame 5
 #frame-5:hover #gi-5b{
     opacity: 100%;
     transition-property: opacity;
-    transition-delay: 4.8s;
+    transition-delay: 6s;
     transition-duration: 0s;
 }
 
-/* Adjust cracked image to be same size as normal */
+/* Adjust cracked image to be roughly same size as normal */
 #gi-5b .img-container img{
     max-width: 185px;
 }
@@ -253,10 +257,6 @@ Frame 5
     animation: bottomAnimIn 1.8s ease-in-out 0.4s;
     animation-fill-mode: backwards;
 }
-/*******************
-Frame 6
-*******************/
-
 
 
 /*******************
@@ -295,7 +295,7 @@ Animations
     90% { transform: translate(0%, 0px) rotate(10deg); }
     100% { transform: translate(0%, 0px) rotate(0deg); }
 }
-
+/* Copied shake animation from Maria */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -313,101 +313,48 @@ Animations
 
 /* General movement animations */
 @keyframes speechBubble{
-    0%{
-        opacity: 0%;
-    }
-    10%{
-        opacity: 100%;
-    }
-    90%{
-        opacity: 100%;
-    }
-    100%{
-        opacity: 0%;
-    }
+    0%{ opacity: 0%; }
+    10%{ opacity: 100%; }
+    90%{ opacity: 100%; }
+    100%{ opacity: 0%; }
 }
 @keyframes speechBubbleStay{
-    0%{
-        opacity: 0%;
-    }
-    10%{
-        opacity: 100%;
-    }
-
-    100%{
-        opacity: 100%;
-    }
+    0%{ opacity: 0%; }
+    10%{ opacity: 100%; }
+    100%{ opacity: 100%; }
 }
 @keyframes bottomAnimIn{
-    0%{
-        transform: translate(0px, 1500px);
-    }
-    75%{
-        transform: translate(0px, 0px);
-    }
-    100%{
-        transform: translate(0px, 0px);
-    }
+    0%{ transform: translate(0px, 1500px); }
+    75%{ transform: translate(0px, 0px); }
+    100%{ transform: translate(0px, 0px); }
 }
 @keyframes rotate90CW{
     0% { transform: rotate(0deg); }
-    /* 25% { transform: rotate(10deg); }
-    75% { transform: rotate(80deg); } */
     100% { transform: rotate(90deg); }
 }
 
 @keyframes signAnimIn{
-    0%{
-        transform: translate(0px, -300px);
-    }
-    75%{
-        transform: translate(0px, 30px);
-    }
-    100%{
-        transform: translate(0px, 0px);
-    }
+    0%{ transform: translate(0px, -300px); }
+    75%{ transform: translate(0px, 30px); }
+    100%{ transform: translate(0px, 0px); }
 }
 @keyframes slideFromTop{
-    0%{
-        transform: translate(0px, -1500px);
-    }
-    75%{
-        transform: translate(0px, 30px);
-    }
-    100%{
-        transform: translate(0px, 0px);
-    }
+    0%{ transform: translate(0px, -1500px); }
+    75%{ transform: translate(0px, 30px); }
+    100%{ transform: translate(0px, 0px); }
 }
 @keyframes slideFromRight{
-    0%{
-        transform: translate(5000px, 0px);
-    }
-    75%{
-        transform: translate(-30px, 0px);
-    }
-    100%{
-        transform: translate(0px, 0px);
-    }
+    0%{ transform: translate(5000px, 0px); }
+    75%{ transform: translate(-30px, 0px); }
+    100%{ transform: translate(0px, 0px); }
 }
 @keyframes slideFromBottom{
-    0%{
-        transform: translate(0px, 1500px);
-    }
-    75%{
-        transform: translate(0px, -30px);
-    }
-    100%{
-        transform: translate(0px, 0px);
-    }
+    0%{ transform: translate(0px, 1500px); }
+    75%{ transform: translate(0px, -30px); }
+    100%{ transform: translate(0px, 0px); }
 }
 @keyframes slideFromLeft{
-    0%{
-        transform: translate(-5000px, 0px);
-    }
-    75%{
-        transform: translate(30px, 0px);
-    }
-    100%{
-        transform: translate(0px, 0px);
-    }
+    0%{ transform: translate(-5000px, 0px); }
+    75%{ transform: translate(30px, 0px); }
+    100%{ transform: translate(0px, 0px); }
 }
