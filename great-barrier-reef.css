@@ -40,19 +40,14 @@ h3, h4 {
     font-size: 29px;
 }
 
-p, #dark-background{
+p {
     font-size: 22px;
 }
 
 .backside-card-p {
-    font-size: 19px;
+    font-size: 17px;
 }
 
-/* Makes the background behind the last paragraph dark so its easier to read. I felt the white clashed a bit with the background there */
-.dark-background {
-    display: inline;
-    background-color: rgba(9, 52, 100, 0.8);
-}
 
 /*************************************
         IMAGES
@@ -78,7 +73,7 @@ p, #dark-background{
     bottom: auto;
     width: auto;
     animation-name: lost-in-space;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
 
