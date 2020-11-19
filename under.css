@@ -84,7 +84,6 @@ Speech-bubble
 }
 
 #bbl-01{
-    position: fixed;
     bottom: 90%;
     top: auto;
     font-size: 30px;
@@ -92,25 +91,21 @@ Speech-bubble
 #bbl-02{
     bottom: 90%;
     top: auto;
-    position: fixed;
     font-size: 20px;
 }
 #bbl-03{
     bottom: 90%;
     top: auto;
-    position: fixed;
     font-size: 20px;
 }
 #bbl-04{
     bottom: 90%;
     top: auto;
-    position: fixed;
     font-size: 20px;
 }
 #bbl-05{
     bottom: 90%;
     top: auto;
-    position: fixed;
     font-size: 20px;
 }
 
@@ -157,7 +152,7 @@ Animations
         transform: translate(0%, 0%);
     }
     100%{
-        transform: translate(200%, 0%);
+        transform: translate(300%, 0%);
     }
 }
 @keyframes returnPosition{
@@ -165,7 +160,7 @@ Animations
         transform: translate(0%, 0%);
     }
     100%{
-        transform: translate(-200%, 0%);
+        transform: translate(-300%, 0%);
     }
 }
 @keyframes fadeInOut{
