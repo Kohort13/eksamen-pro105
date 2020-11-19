@@ -40,8 +40,8 @@ Fish
 .container.lakselars{
     height: fit-content;
     bottom: 10%;
-    right: 5%;
-    left:auto;
+    right: auto;
+    left:70%;
     top: auto;
 }
 

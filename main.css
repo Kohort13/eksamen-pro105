@@ -45,14 +45,15 @@ NAVIGATION BUTTONS
     position: relative;
     text-align: center;
     height: 30px;
-    width: 150px;
+    width: 250px;
     /* Center buttons horizontally */
     margin: 0 auto;
-    background-color: #777;
+    background-color: #203160;
     border-radius: 4px;
 }
 .nav-buttons a{
     font-size: 20px;
+    color: #fff;
 }
 
 /* Styling text for navigation buttons */
