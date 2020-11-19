@@ -58,7 +58,7 @@
 
 /* using animation to move the speech bubble upwards the frame. */
 .frame:hover .container.gullivar .speech-bubble {
-    animation: speechBubble 6s ease-in-out 0s;
+    animation: speechBubble 7s ease-in-out 0s;
     animation-fill-mode: forwards;
 }
 
@@ -80,7 +80,7 @@
         transform: translate(0px, 0px);
     }
 
-    25% {
+    20% {
         opacity: 100%;
         transform: translate(0px, 0px);
     }
