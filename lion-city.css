@@ -23,13 +23,13 @@
 .container.lion {
     height: fit-content;
     left: 45%;
-    bottom: 20%;
+    bottom: 0%;
     top: auto;
 
 }
 
 .container.lion img {
-    width: 100%;
+    width: 75%;
 }
 
 .container.gullivar {
@@ -58,7 +58,7 @@
 
 /* using animation to move the speech bubble upwards the frame. */
 .frame:hover .container.gullivar .speech-bubble {
-    animation: speechBubble 4s ease-in-out 0s;
+    animation: speechBubble 6s ease-in-out 0s;
     animation-fill-mode: forwards;
 }
 

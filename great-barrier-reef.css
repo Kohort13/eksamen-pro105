@@ -1,6 +1,11 @@
+/*******************************************
+            Coded by: Daniel Toft
+*******************************************/
+
+
 /* Sets the background image and default text-align to center */
 body {
-    background-image: url("/images/great_barrier_reef.jpg");
+    background-image: url(images/great_barrier_reef.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -40,15 +45,14 @@ h3, h4 {
     font-size: 29px;
 }
 
-p, #dark-background{
+p {
     font-size: 22px;
 }
 
-/* Makes the background behind the last paragraph dark so its easier to read. I felt the white clashed a bit with the background there */
-.dark-background {
-    display: inline;
-    background-color: rgba(9, 52, 100, 0.8);
+.backside-card-p {
+    font-size: 17px;
 }
+
 
 /*************************************
         IMAGES
@@ -68,16 +72,15 @@ p, #dark-background{
     animation-iteration-count: infinite; 
 }
 
-#space-ivar {
-    transform: scale(0.5);
+#space-ivar {   
     position: fixed;
-    top: 70%;
+    top: 85%;
     bottom: auto;
     width: auto;
     animation-name: lost-in-space;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate-reverse;
 
 }
 
@@ -100,9 +103,10 @@ p, #dark-background{
 
 @keyframes lost-in-space {
     0%   {top: 88%; left: 45%; transform: scale(0.5);}
-    25%  {top: 88%; left: 44%; transform: scale(0.5); transform:rotate(-67deg);}
-    50%  {top: 93%; left: 35%; transform: scale(0.5);}
-    75%  {top: 95%; left: 32%; transform: scale(0.5); transform:rotate(90deg);}
+    20%  {top: 88%; left: 44%; transform: rotate(-67deg) scale(0.5);}
+    40%  {top: 80%; left: 44%; transform: rotate(12deg) scale(0.5);}
+    60%  {top: 93%; left: 35%; transform: rotate(40deg) scale(0.5);}
+    80%  {top: 95%; left: 32%; transform: rotate(90deg) scale(0.5);}
     100% {top: 88%; left: 45%; transform: scale(0.5);}
 }
 
@@ -110,7 +114,7 @@ p, #dark-background{
 /***************************************
     FLIP CARDS 
     Based upon https://www.w3schools.com/howto/howto_css_flip_card.asp
-    Heavily modified.
+    Modified.
 ***************************************/
 
 /*Styles the actual cards*/
