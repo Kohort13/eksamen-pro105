@@ -172,7 +172,8 @@ Animations
 /*******************
 Frame 1
 *******************/
-/* Duplicated animations to facilitate multiple speech-bubbles. Image is set to 0% opacity on duplicate */
+/* Duplicated animations to facilitate multiple speech-bubbles. 
+Image is set to 0% opacity on duplicate */
 #frame-1:hover #gull-1a{
     animation: 
     bounce 2s ease-in-out 500ms infinite,
