@@ -261,13 +261,13 @@ Frame 4
 }
 #frame-4:hover #bbl-05{
     animation:
-    fadeInOut 5s;
+    fadeInOut 10s;
     animation-fill-mode: forwards;
 }
 
 #frame-4:hover #lakselars-3{
     animation:
-    flipflop 6s;
+    flipflop 11s;
     animation-fill-mode: forwards;
 }
 /*******************
