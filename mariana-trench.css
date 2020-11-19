@@ -26,6 +26,17 @@ Custom content
     animation: wave 5s ease-in-out 0ms infinite;
     transition: top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+#sea-bottom{
+    width: 100%;
+    height: 10%;
+    top: auto;
+    bottom: 0%;
+}
+#sea-bottom img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(12%);
+}
 
 .container.gull-ivar{
     height: fit-content;
@@ -238,6 +249,10 @@ Frame 5
 #frame-5:hover ~ #background{
     background-color: #0a161b;
 }
+#frame-5:hover #sea-bottom img{
+    animation: bottomAnimIn 1.8s ease-in-out 0.4s;
+    animation-fill-mode: backwards;
+}
 /*******************
 Frame 6
 *******************/
@@ -321,6 +336,17 @@ Animations
 
     100%{
         opacity: 100%;
+    }
+}
+@keyframes bottomAnimIn{
+    0%{
+        transform: translate(0px, 1500px);
+    }
+    75%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
     }
 }
 @keyframes rotate90CW{
