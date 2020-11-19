@@ -1,10 +1,4 @@
 
-/* GENERÉR RØD BORD RUNDT ALLE CONTAINERE: */
-.container{
-    border: 3px solid red;
-}
-
-
 /*******************
 Custom content
 *******************/
@@ -31,6 +25,17 @@ Custom content
     border-bottom-right-radius: 50%;
     animation: wave 5s ease-in-out 0ms infinite;
     transition: top 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#sea-bottom{
+    width: 100%;
+    height: 10%;
+    top: auto;
+    bottom: 0%;
+}
+#sea-bottom img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(12%);
 }
 
 .container.gull-ivar{
@@ -69,12 +74,17 @@ Custom content
     border: 4px solid #684406;
     transform: rotate(22deg);
 }
+.frame:hover .sign-anim-in{
+    animation: signAnimIn 1.8s ease-in-out 0s 1;
+    animation-fill-mode: both;
+}
 .container.signcont{
     top: 10%;
     right: 22%;
     left: auto;
 }
-.container.signcont > div{
+
+.sign-bouncer {
     animation: bounce 2s ease-in-out 0s infinite;
 }
 /*******************
@@ -160,9 +170,25 @@ Frame 3
     bottom: 10%;
     left: 10%;
 }
+
+/* Hiding 1st speech bubble after 4.8s */
 #frame-3:hover #gi-3a{
     opacity: 0%;
+    transition-property: opacity;
+    transition-delay: 4.8s;
+    transition-duration: 0s;
     
+}
+/* Showing 2nd speech bubble after 4.8s */
+#gi-3b{
+    opacity: 0%;
+}
+#frame-3:hover #gi-3b{
+    opacity: 100%;
+    transition-property: opacity;
+    transition-delay: 4.8s;
+    transition-duration: 0s;
+
 }
 
 #frame-3:hover ~ #background{
@@ -180,8 +206,52 @@ Frame 4 (optional)
 /*******************
 Frame 5
 *******************/
+/* Removing default animations for transitioning out of page */
+#frame-5 .anim-out, #frame-5 .anim-rotate{
+    animation: none;
+}
+#frame-5:hover .speech-bubble-anim{
+    animation: speechBubbleStay 6s ease-in-out 1.8s;
+    animation-fill-mode: both;
+}
+
+
+#gi-5a, #gi-5b{
+    top: auto;
+    bottom: 10%;
+    left: 10%;
+}
+
+/* Hiding 1st speech bubble after 4.8s */
+#frame-5:hover #gi-5a{
+    opacity: 0%;
+    transition-property: opacity;
+    transition-delay: 4.8s;
+    transition-duration: 0s;
+    
+}
+
+/* Showing 2nd speech bubble after 4.8s */
+#gi-5b{
+    opacity: 0%;
+}
+#frame-5:hover #gi-5b{
+    opacity: 100%;
+    transition-property: opacity;
+    transition-delay: 4.8s;
+    transition-duration: 0s;
+}
+
+/* Adjust cracked image to be same size as normal */
+#gi-5b .img-container img{
+    max-width: 185px;
+}
 #frame-5:hover ~ #background{
     background-color: #0a161b;
+}
+#frame-5:hover #sea-bottom img{
+    animation: bottomAnimIn 1.8s ease-in-out 0.4s;
+    animation-fill-mode: backwards;
 }
 /*******************
 Frame 6
@@ -256,6 +326,29 @@ Animations
         opacity: 0%;
     }
 }
+@keyframes speechBubbleStay{
+    0%{
+        opacity: 0%;
+    }
+    10%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes bottomAnimIn{
+    0%{
+        transform: translate(0px, 1500px);
+    }
+    75%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
 @keyframes rotate90CW{
     0% { transform: rotate(0deg); }
     /* 25% { transform: rotate(10deg); }
@@ -263,6 +356,17 @@ Animations
     100% { transform: rotate(90deg); }
 }
 
+@keyframes signAnimIn{
+    0%{
+        transform: translate(0px, -300px);
+    }
+    75%{
+        transform: translate(0px, 30px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
 @keyframes slideFromTop{
     0%{
         transform: translate(0px, -1500px);
