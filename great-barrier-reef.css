@@ -12,13 +12,6 @@ body {
     color: white;
 }
 
-.container {
-
-    /*
-    Used to check that the elements are inside the box. Makes it easier to work on placement
-    border: solid 3px red;
-    */
-}
 /* Makes the content of the 3 main-containers center */
 .container#welcome-gbr, .container#fun-facts-gull-ivar, .container#deeper-dive-gull-ivar  {
     text-align: center;
