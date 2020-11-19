@@ -54,14 +54,19 @@ GULLIVAR
 /*
 NECKLACE
 */
-  #frame-1:hover #necklace{
-    transform: scale(0.2);
-    left: 65%;
-    top: 35%;
+  #frame-1:hover #necklace img{
+    width: 100%;
     animation-name: necklace-sink;
     animation-duration: 7s;
     animation-timing-function: linear;
-    position: fixed;
+  }
+  #frame-1:hover #necklace{
+    /* border: 3px solid red; */
+    width: 5%;
+    left: auto;
+    top: auto;
+    bottom: 15%;
+    right: 7%;
   }
 
     @keyframes necklace-sink {
