@@ -86,10 +86,13 @@ body{
 }
 /* Manually making some names wider to avoid them spreading over several lines */
 .link-text.gbr{
-    width: 160px;
+    width: 200px;
 }
 .link-text.mariana-trench{
-    width: 130px;
+    width: 180px;
+}
+.link-text.lion-city{
+    width: 100px;
 }
 .lion-city{
     top: 35%;
