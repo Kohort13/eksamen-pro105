@@ -18,36 +18,6 @@
     text-decoration: none;
     color: blue;
 }
-#frame-id .container{
-    transform: scale(1);
-}
-
-
-#container-id{
-    width: 100%;
-    height: 100%;
-}
-
-
-#container-id{
-    top: auto;
-    right: 20%;
-    bottom: 15%;
-    left: auto;
-}
-
-
-#container-id .speech-bubble .arrow{
-    left: -5px;
-    bottom: 70px;
-    transform: rotate(135deg);
-}
-
-
-#frame-id:hover #container-id div{
-    transform: scale(1.2);
-}
-
 
 .img-container{
     animation: bounce 2s ease-in-out 500ms infinite;
@@ -57,7 +27,9 @@
     position: relative;
     max-width: 500%;   
 }
-
+.container{
+    border: 3px solid red;
+}
 /*************************
 Fish
 **************************/
@@ -82,35 +54,6 @@ Speech-bubble
     position: relative;
     animation: bounce 2s ease-in-out 500ms infinite;
 }
-/* #bbl-02{
-    transform: translate(0px, -300px);
-} */
-/* #bbl-01{
-    bottom: 90%;
-    top: auto;
-    font-size: 30px;
-}
-#bbl-02{
-    bottom: 90%;
-    top: auto;
-    font-size: 20px;
-}
-#bbl-03{
-    bottom: 90%;
-    top: auto;
-    font-size: 20px;
-}
-#bbl-04{
-    bottom: 90%;
-    top: auto;
-    font-size: 20px;
-}
-#bbl-05{
-    bottom: 90%;
-    top: auto;
-    font-size: 20px;
-} */
-
 /*************************
 Animations
 *************************/
@@ -159,10 +102,10 @@ Animations
 }
 @keyframes returnPosition{
     0%{
-        transform: translate(0%, 0%);
+        transform: translate(300%, 0%);
     }
     100%{
-        transform: translate(-300%, 0%);
+        transform: translate(0%, 0%);
     }
 }
 @keyframes fadeInOut{
@@ -228,17 +171,16 @@ Animations
     }
 }
 
+/*******************
+Frame 1
+*******************/
 /* Duplicated animations to facilitate multiple speech-bubbles. Image is set to 0% opacity on duplicate */
 #frame-1:hover #gull-1a{
-    bottom:10%;
-    left: 5%;
     animation: 
     bounce 2s ease-in-out 500ms infinite,
     slideRight 1s ease-in-out;
 }
 #frame-1:hover #gull-1b{
-    bottom:10%;
-    left: 5%;
     animation: 
     bounce 2s ease-in-out 500ms infinite,
     fadeIn 4s ease-in-out;
@@ -251,9 +193,10 @@ Animations
     bounce 2s ease-in-out 500ms infinite,
     fadeIn 4s;
 }
+/*******************
+Frame 2
+*******************/
 #frame-2:hover #gull-2a{
-    bottom:10%;
-    left: 5%;
     animation:
     bounce 2s ease-in-out 500ms infinite,
     furtherRight 5s ease-in-out;
@@ -270,8 +213,6 @@ Animations
     opacity: 0%;
 }
 #frame-2:hover #gull-2b{
-    bottom:10%;
-    left: 5%;
     animation:
     bounce 2s ease-in-out 500ms infinite,
     furtherRight 5s ease-in-out;
@@ -286,15 +227,11 @@ Animations
     fadeIn 3s;
 }
 #frame-2:hover #lakselars-1a{
-    right: 5%;
-    bottom: 10%;
     animation:
     shake 1s infinite,
     slideLeft 4s ease-in-out;
 }
 #frame-2:hover #lakselars-1b{
-    right: 5%;
-    bottom: 10%;
     animation:
     shake 1s infinite,
     slideLeft 4s ease-in-out;
@@ -307,44 +244,37 @@ Animations
     bounce 2s ease-in-out 500ms infinite,
     fadeIn 5s;
 }
-#frame-3:hover #gull-3{
-    bottom:10%;
-    right:32%;
-    left:auto;
-    top: auto;
+/*******************
+Frame 3
+*******************/
+#frame-3:hover .container.gull-ivar{
+    transform: translate(300%, 0%);
 }
 #frame-3:hover #lakselars-2{
-    right: 5%;
-    bottom: 10%;
     animation:
     shake 1s infinite;
 }
 #frame-3:hover #bbl-04{
     animation: fadeIn 2s
 }
-#frame-4:hover #gull-4{
-    bottom:10%;
-    right:32%;
-    left:auto;
-    top: auto;
-}
+/*******************
+Frame 4
+*******************/
 #frame-4:hover #bbl-04{
     animation:
     fadeInOut 7s;
     animation-fill-mode: forwards;
 }
+
 #frame-4:hover #lakselars-3{
-    right: 5%;
-    bottom: 10%;
     animation:
     flipflop 9s;
     animation-fill-mode: forwards;
 }
+/*******************
+Frame 5
+*******************/
 #frame-5:hover #gull-5{
-    bottom:10%;
-    right:32%;
-    left:auto;
-    top: auto;
     animation:
     returnPosition 3s;
     animation-fill-mode: forwards;
