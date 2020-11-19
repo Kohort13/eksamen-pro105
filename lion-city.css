@@ -32,6 +32,12 @@
     width: 100%;
 }
 
+.container.gullivar {
+    height: fit-content;
+    left: 50%;
+    top: auto;
+    bottom: 40%;
+}
 
 
 .bounce-animator {
@@ -45,8 +51,8 @@
 }
 
 #gte-2 {
-    bottom: 50px;
-    left: 33px;
+    bottom: 100px;
+    left: 200px;
 }
 
 
@@ -66,12 +72,7 @@
     left: 10%;
 }
 
-.container.gullivar {
-    height: fit-content;
-    left: 50%;
-    top: auto;
-    bottom: 40%;
-}
+
  /* Magnus helped and recommended the code below for animation  */
 @keyframes speechBubble {
     0% {
